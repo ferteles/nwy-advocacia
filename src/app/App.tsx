@@ -231,44 +231,42 @@ function PracticeAreas() {
 
 function Methodology() {
   const steps = [
-    { num: "01", title: "Análise", desc: "Leitura aprofundada do caso, do contexto jurídico e dos riscos envolvidos." },
-    { num: "02", title: "Estratégia", desc: "Definição do caminho jurídico mais adequado, considerando objetivos, cenários possíveis e impactos de curto, médio e longo prazo." },
-    { num: "03", title: "Condução", desc: "Condução técnica das medidas necessárias, com acompanhamento responsável e comunicação clara ao longo de todo o processo." },
+    { title: "Análise", desc: "Leitura aprofundada do caso, do contexto jurídico e dos riscos envolvidos." },
+    { title: "Estratégia", desc: "Definição do caminho jurídico mais adequado, considerando objetivos, cenários possíveis e impactos de curto, médio e longo prazo." },
+    { title: "Condução", desc: "Condução técnica das medidas necessárias, com acompanhamento responsável e comunicação clara ao longo de todo o processo." },
   ];
 
   return (
     <section className="relative overflow-hidden py-[80px] md:py-[120px]" style={{ background: COLORS.dark }}>
-      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover grayscale opacity-5" />
-      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
-        <div className="max-w-[800px]">
-          <h2 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#d9d9d9]" style={{ fontSize: "clamp(28px, 3.5vw, 42px)", lineHeight: 1.2 }}>
+      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover grayscale opacity-10 mix-blend-overlay" />
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
+        
+        {/* Left Side: Title */}
+        <div className="lg:w-1/2 w-full">
+          <h2 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.01em] text-white" style={{ fontSize: "clamp(34px, 4vw, 44px)", lineHeight: 1.25 }}>
             Nossa atuação jurídica é estruturada a partir de três eixos fundamentais:
           </h2>
-          <div className="h-[4px] w-[150px] mt-6" style={{ background: COLORS.gold }} />
+          <div className="h-[4px] w-full max-w-[320px] mt-6" style={{ background: "#A2CCFF" }} />
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 relative">
-          <div className="hidden md:block absolute top-[60px] left-0 right-0 h-[1px] border-t-2 border-dotted border-[#A07C3D]/30 z-0" />
-          {steps.map((step, idx) => (
-            <div key={step.title} className="relative group bg-[#1A1A1A] z-10 md:bg-transparent">
-              {/* Vertical connector on Desktop */}
-              {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute top-[50%] right-0 w-[1px] h-[50%] border-r-2 border-dotted border-[#A07C3D]/30 z-10" />
-              )}
-              <div className="p-8 md:p-10 md:pr-12 h-full flex flex-col">
-                <span className="font-['Cormorant_Garamond',serif] text-[#A07C3D] block mb-4 italic opacity-90" style={{ fontSize: 52, lineHeight: 1 }}>
-                  {step.num}
-                </span>
-                <h3 className="font-['Cormorant_Garamond',serif] font-semibold tracking-tight text-[#d9d9d9]" style={{ fontSize: "clamp(26px, 2.5vw, 32px)" }}>
-                  {step.title}
-                </h3>
-                <p className="font-['Inter',sans-serif] text-[#d9d9d9]/70 mt-4" style={{ fontSize: "clamp(15px, 1.3vw, 16px)", lineHeight: 1.6 }}>
-                  {step.desc}
-                </p>
-              </div>
+        {/* Right Side: Vertical Stacked Cards */}
+        <div className="lg:w-1/2 w-full flex flex-col gap-6 md:gap-8 relative">
+          {/* Vertical Gold Bar Background */}
+          <div className="absolute top-[-60px] bottom-[-60px] left-[20%] w-[120px] md:w-[140px] z-0" style={{ background: COLORS.gold }} />
+
+          {steps.map((step) => (
+            <div key={step.title} className="relative z-10 px-8 py-10 md:px-12 md:py-10 shadow-xl" style={{ background: COLORS.accent }}>
+              <h3 className="font-['Cormorant_Garamond',serif] font-semibold text-white tracking-wide" style={{ fontSize: "clamp(26px, 3vw, 32px)" }}>
+                {step.title}
+              </h3>
+              <div className="h-[3px] w-full my-5" style={{ background: COLORS.darkAlt }} />
+              <p className="font-['Inter',sans-serif] font-medium text-white/90" style={{ fontSize: "clamp(15px, 1.5vw, 16px)", lineHeight: 1.6 }}>
+                {step.desc}
+              </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
