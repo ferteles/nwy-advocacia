@@ -61,8 +61,8 @@ function Logo({ color = "#33363B", className = "" }: { color?: string; className
 
 function NWWatermark({ className = "" }: { className?: string }) {
   return (
-    <div className={`pointer-events-none select-none overflow-hidden absolute inset-0 flex items-center justify-center opacity-[0.03] ${className}`}>
-      <svg viewBox="0 0 200 120" fill="none" className="w-[150%] h-auto min-w-[1000px] scale-[1.3] -rotate-12">
+    <div className={`pointer-events-none select-none overflow-hidden absolute inset-0 opacity-[0.08] ${className}`}>
+      <svg viewBox="0 0 200 120" fill="none" className="w-full h-auto min-w-[1400px] absolute top-1/2 left-[-10%] -translate-y-1/2 scale-[1.8] md:scale-[2.4]">
         <path d={svgPaths.p20d3ee80} fill="currentColor" />
         <path d={svgPaths.p1f763f00} fill="currentColor" />
         <path d={svgPaths.p1bfcac00} fill="currentColor" />
@@ -141,12 +141,18 @@ function Hero() {
         {/* Band 1: Charcoal Dark */}
         <div className="w-full h-[60px] md:h-[90px]" style={{ background: COLORS.darkAlt }} />
         {/* Band 2: Deep Gold */}
-        <div className="w-full h-[70px] md:h-[100px]" style={{ background: COLORS.gold }} />
+        <div className="w-full h-[50px] md:h-[80px]" style={{ background: COLORS.gold }} />
+        
         {/* Band 3: Dark Overlay with Congress Background and Blue Accent Strip */}
-        <div className="relative w-full h-[200px] md:h-[280px] flex items-center" style={{ background: COLORS.dark }}>
-          <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 mix-blend-overlay" />
-          <div className="relative z-10 w-full h-[25px] md:h-[35px]" style={{ background: COLORS.accent, opacity: 0.9 }} />
+        <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: COLORS.dark }}>
+          <img src={imgHeroBg} alt="Brasília" className="absolute inset-0 w-full h-full object-cover grayscale opacity-30" />
+          <div className="relative z-10 w-full h-[30px] md:h-[40px]" style={{ background: COLORS.accent }} />
         </div>
+
+        {/* Band 4: Deep Gold (Mirror) */}
+        <div className="w-full h-[50px] md:h-[80px]" style={{ background: COLORS.gold }} />
+        {/* Band 5: Charcoal Dark (Mirror) */}
+        <div className="w-full h-[60px] md:h-[90px]" style={{ background: COLORS.darkAlt }} />
       </div>
     </>
   );
