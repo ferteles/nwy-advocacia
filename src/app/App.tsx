@@ -1,7 +1,7 @@
 import { useState } from "react";
 import svgPaths from "../imports/svg-ttosx3q9hh";
 
-// Proejct images
+// Project images
 import imgHeroBg from "../assets/images/hero-bg-pattern.png";
 import imgOffice from "../assets/images/office-building.png";
 import imgGabriela from "../assets/images/gabriela-nepomuceno.png";
@@ -73,7 +73,7 @@ function Navbar() {
         <Logo className="w-[70px] md:w-[80px] h-auto" />
         <div className="hidden md:flex gap-8">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="font-['Inter',sans-serif] text-[#32353A] hover:text-[#5B728E] transition-colors" style={{ fontSize: 15 }}>
+            <a key={l.href} href={l.href} className="font-['Inter',sans-serif] text-[#32353A] hover:text-[#5B728E] transition-colors" style={{ fontSize: 18 }}>
               {l.label}
             </a>
           ))}
@@ -127,12 +127,11 @@ function Hero() {
 function About() {
   return (
     <section id="escritorio" className="relative overflow-hidden">
-      {/* Dark bar behind image on desktop */}
-      <div className="hidden lg:block absolute left-0 top-0 w-full h-[689px]" style={{ background: COLORS.dark }} />
+      {/* Mobile layout */}
       <div className="block lg:hidden" style={{ background: COLORS.light }}>
         <div className="px-4 pt-8 pb-0">
           <div className="relative">
-            <div className="absolute right-0 top-0 bottom-0 w-[4px]" style={{ background: COLORS.gold }} />
+            <div className="absolute left-0 top-0 bottom-0 w-[4px]" style={{ background: COLORS.gold }} />
             <img src={imgOffice} alt="Escritório" className="w-full h-[300px] object-cover" />
           </div>
         </div>
@@ -148,19 +147,23 @@ function About() {
         </div>
       </div>
 
-      {/* Desktop layout */}
+      {/* Desktop — banda escura full-width cruza a imagem (fiel ao Figma) */}
       <div className="hidden lg:block relative" style={{ background: COLORS.light }}>
-        <div className="max-w-[1200px] mx-auto px-6 py-20 flex gap-12 items-center">
-          <div className="w-1/2 relative">
-            <div className="absolute left-0 top-0 bottom-0 w-[6px]" style={{ background: COLORS.gold }} />
-            <img src={imgOffice} alt="Escritório" className="w-full h-[500px] object-cover" />
-          </div>
-          <div className="w-1/2">
-            <div className="p-8" style={{ background: COLORS.dark }}>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: 24, lineHeight: 1.5 }}>
+        {/* Banda escura: começa 250px do topo, altura 460px */}
+        <div className="absolute left-0 right-0" style={{ top: 250, height: 460, background: COLORS.dark }} />
+        <div className="relative max-w-[1440px] mx-auto" style={{ paddingTop: 120, paddingBottom: 80, paddingLeft: 120, paddingRight: 120 }}>
+          <div className="flex items-start">
+            {/* Imagem: inicia em y=120, 130px acima da banda escura */}
+            <div className="relative flex-shrink-0" style={{ width: '40%', zIndex: 1 }}>
+              <div className="absolute left-0 top-0 bottom-0 w-[6px]" style={{ background: COLORS.gold }} />
+              <img src={imgOffice} alt="Escritório" className="w-full object-cover" style={{ height: 640 }} />
+            </div>
+            {/* Texto: inicia em y=120+220=340 → 90px dentro da banda escura */}
+            <div className="flex-1 relative" style={{ zIndex: 1, paddingTop: 220, paddingLeft: 64 }}>
+              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
                 Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
               </p>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-4" style={{ fontSize: 24, lineHeight: 1.5 }}>
+              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-6" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
                 Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
               </p>
             </div>
@@ -185,19 +188,24 @@ const practiceAreas = [
 function PracticeAreas() {
   return (
     <section id="atuacao" style={{ background: COLORS.light }} className="pb-0 md:pb-20">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 pt-10 md:pt-0">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] pt-10 md:pt-14 pb-8 md:pb-12">
         <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
           Atuamos em diferentes áreas do Direito, com foco em demandas que exigem leitura de cenário, responsabilidade decisória e condução técnica consistente.
         </h2>
       </div>
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-        {practiceAreas.map((area) => (
-          <div key={area.title} className="p-6 md:p-8 flex flex-col" style={{ background: COLORS.dark }}>
-            <div className="h-[3px] md:h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.blue }} />
-            <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] whitespace-pre-line" style={{ fontSize: "clamp(28px, 3vw, 32px)", lineHeight: "28px" }}>
+      {/* Grid: primeiros 6 em 3 colunas, últimos 2 em 2 colunas mais largas */}
+      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-0">
+        {practiceAreas.map((area, i) => (
+          <div
+            key={area.title}
+            className={`p-6 md:p-8 flex flex-col md:col-span-1 ${i < 6 ? "lg:col-span-4" : "lg:col-span-6"}`}
+            style={{ background: COLORS.dark }}
+          >
+            <div className="h-[3px] md:h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.gold }} />
+            <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] whitespace-pre-line" style={{ fontSize: "clamp(26px, 2.5vw, 32px)", lineHeight: "30px" }}>
               {area.title}
             </h3>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3 md:mt-4" style={{ fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.5 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3 md:mt-4" style={{ fontSize: "clamp(13px, 1.3vw, 16px)", lineHeight: 1.6 }}>
               {area.desc}
             </p>
           </div>
@@ -217,21 +225,26 @@ function Methodology() {
   return (
     <section className="relative overflow-hidden" style={{ background: COLORS.dark }}>
       <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
-      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col lg:flex-row gap-8 md:gap-12">
+      {/* Faixa dourada vertical no desktop, posicionada após a coluna esquerda */}
+      <div
+        className="hidden lg:block absolute top-0 bottom-0"
+        style={{ left: "calc(50% + 48px)", width: 182, background: COLORS.gold, opacity: 0.18, zIndex: 0 }}
+      />
+      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col lg:flex-row gap-8 md:gap-12" style={{ zIndex: 1 }}>
         <div className="lg:w-1/2">
           <h2 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
             Nossa atuação jurídica é estruturada a partir de três eixos fundamentais:
           </h2>
-          <div className="h-[4px] w-full max-w-[312px] md:max-w-[430px] mt-4 md:mt-6" style={{ background: COLORS.blue }} />
+          <div className="h-[3px] w-full max-w-[312px] md:max-w-[430px] mt-4 md:mt-6" style={{ background: COLORS.gold }} />
         </div>
         <div className="lg:w-1/2 flex flex-col gap-0">
           {steps.map((step) => (
             <div key={step.title} className="relative p-6 md:p-8" style={{ background: COLORS.accent }}>
-              <div className="h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.dark }} />
-              <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(28px, 3vw, 32px)" }}>
+              <div className="h-[3px] w-full mb-4 md:mb-5" style={{ background: COLORS.gold }} />
+              <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(28px, 3vw, 35px)" }}>
                 {step.title}
               </h3>
-              <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-2" style={{ fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.5 }}>
+              <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3" style={{ fontSize: "clamp(14px, 1.5vw, 18px)", lineHeight: 1.6 }}>
                 {step.desc}
               </p>
             </div>
@@ -265,7 +278,7 @@ const lawyers = [
 
 function Lawyers() {
   return (
-    <section id="advogados" style={{ background: COLORS.light }} className="py-12 md:py-20">
+    <section id="advogados" style={{ background: "white" }} className="py-12 md:py-20">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-12" style={{ fontSize: "clamp(34px, 4vw, 40px)", lineHeight: 1.15 }}>
           Advogados
@@ -276,7 +289,7 @@ function Lawyers() {
           {lawyers.map((l) => (
             <div key={l.name}>
               <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover grayscale" />
-              <div className="h-[4px] w-full mt-4" style={{ background: COLORS.blue }} />
+              <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
               <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px" }}>
                 {l.name}
               </h3>
@@ -293,7 +306,7 @@ function Lawyers() {
         {/* Mobile: featured lawyer (Paulo Waterloo) */}
         <div className="md:hidden">
           <img src={lawyers[1].photo} alt={lawyers[1].name} className="w-full h-[360px] object-cover grayscale" />
-          <div className="h-[3px] w-full mt-4" style={{ background: COLORS.blue }} />
+          <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
           <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px" }}>
             {lawyers[1].name}
           </h3>
@@ -311,21 +324,41 @@ function Lawyers() {
 
 function Quote() {
   return (
-    <section className="relative overflow-hidden" style={{ background: COLORS.dark }}>
-      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
-      <div className="absolute inset-0" style={{ background: COLORS.gold, opacity: 0.15 }} />
-      <div className="relative max-w-[800px] mx-auto px-6 py-16 md:py-24 text-center">
-        <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.4 }}>
-          Comunicamos pouco, mas dizemos muito.<br />
-          Não gritamos autoridade. Sustentamos.
-        </p>
-        <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.4 }}>
-          Atuamos com postura segura, estratégica, discreta e precisa.<br className="hidden md:inline" />
-          {" "}Não utilizamos o medo como argumento nem a urgência como ferramenta.
-        </p>
-        <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.4 }}>
-          Preferimos clareza, precisão e direção.
-        </p>
+    <section className="relative overflow-hidden" style={{ background: COLORS.light }}>
+      {/* Faixa dourada full-width que cruza toda a seção (~45% da altura) */}
+      <div
+        className="absolute left-0 right-0"
+        style={{ top: "42%", height: 102, background: COLORS.gold, zIndex: 2 }}
+      />
+      {/* Caixa escura centralizada com margens laterais */}
+      <div
+        className="relative mx-auto"
+        style={{
+          marginLeft: "clamp(24px, 9.4vw, 135px)",
+          marginRight: "clamp(24px, 8.3vw, 120px)",
+          marginTop: 80,
+          marginBottom: 80,
+          zIndex: 3,
+        }}
+      >
+        <div className="relative overflow-hidden" style={{ background: COLORS.dark }}>
+          {/* Padrão de fundo dentro da caixa escura */}
+          <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
+          {/* Texto acima da faixa dourada */}
+          <div className="relative px-10 md:px-16 py-14 md:py-20" style={{ zIndex: 4 }}>
+            <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+              Comunicamos pouco, mas dizemos muito.<br />
+              Não gritamos autoridade. Sustentamos.
+            </p>
+            <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+              Atuamos com postura segura, estratégica, discreta e precisa.<br className="hidden md:inline" />
+              {" "}Não utilizamos o medo como argumento nem a urgência como ferramenta.
+            </p>
+            <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+              Preferimos clareza, precisão e direção.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
