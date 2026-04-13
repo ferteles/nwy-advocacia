@@ -58,6 +58,22 @@ function Logo({ color = "#33363B", className = "" }: { color?: string; className
   );
 }
 
+function NWWatermark({ className = "" }: { className?: string }) {
+  return (
+    <div className={`pointer-events-none select-none overflow-hidden ${className}`}>
+      <svg viewBox="0 0 200 120" fill="none" className="w-full h-full opacity-[0.03]">
+        <path d={svgPaths.p20d3ee80} fill="currentColor" />
+        <path d={svgPaths.p1f763f00} fill="currentColor" />
+        <path d={svgPaths.p1bfcac00} fill="currentColor" />
+        <path d={svgPaths.pe80f900} fill="currentColor" />
+        <path d={svgPaths.p23583a00} fill="currentColor" />
+        <path d={svgPaths.p2df23480} fill="currentColor" />
+        <path d={svgPaths.p32dc8b00} fill="currentColor" />
+      </svg>
+    </div>
+  );
+}
+
 function Navbar() {
   const [open, setOpen] = useState(false);
   const links = [
@@ -102,12 +118,13 @@ function Navbar() {
 function Hero() {
   return (
     <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
+      <NWWatermark className="absolute top-1/2 left-0 -translate-y-1/2 w-[120%] h-auto text-[#000]" />
       <div className="absolute inset-0">
-        <img src={imgHeroBg} alt="" className="w-full h-full object-cover opacity-15" />
+        <img src={imgHeroBg} alt="" className="w-full h-full object-cover opacity-5" />
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.dark }} />
       <div className="absolute bottom-[50px] md:bottom-[60px] left-0 right-0 h-[36px] md:h-[60px] opacity-80" style={{ background: COLORS.gold }} />
-      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full pt-[80px] md:pt-[100px]">
+      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full py-[120px] md:py-[150px]">
         <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
           <h1 className="font-['Cormorant_Garamond',serif] text-[#3D4756]" style={{ fontSize: "clamp(30px, 4vw, 42px)", lineHeight: 1.05 }}>
             Condução jurídica de casos que exigem estruturação estratégica e responsabilidade na tomada de decisões.
@@ -115,7 +132,7 @@ function Hero() {
           <p className="mt-4 md:mt-6 font-['Inter',sans-serif] text-[#3D4756]" style={{ fontSize: "clamp(14px, 2vw, 18px)", lineHeight: 1.5 }}>
             Prática construída a partir de experiência sólida em contextos que exigem responsabilidade, planejamento e tomada de decisões conscientes.
           </p>
-          <a href="#contato" className="inline-block mt-5 md:mt-6 font-['Inter',sans-serif] text-[#3D4756] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
+          <a href="#contato" className="inline-block mt-5 md:mt-6 font-['Inter',sans-serif] text-[#3D4756] border-b-[3px] border-black/80 pb-1 hover:opacity-70 transition font-medium" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
             Entrar em Contato
           </a>
         </div>
@@ -126,7 +143,7 @@ function Hero() {
 
 function About() {
   return (
-    <section id="escritorio" className="relative overflow-hidden">
+    <section id="escritorio" className="relative overflow-hidden py-[80px] md:py-[120px]">
       {/* Dark bar behind image on desktop */}
       <div className="hidden lg:block absolute left-0 top-0 w-full h-[689px]" style={{ background: COLORS.dark }} />
       <div className="block lg:hidden" style={{ background: COLORS.light }}>
@@ -150,17 +167,18 @@ function About() {
 
       {/* Desktop layout */}
       <div className="hidden lg:block relative" style={{ background: COLORS.light }}>
-        <div className="max-w-[1200px] mx-auto px-6 py-20 flex gap-12 items-center">
+        <div className="max-w-[1200px] mx-auto px-6 py-20 flex gap-16 items-center">
           <div className="w-1/2 relative">
-            <div className="absolute left-0 top-0 bottom-0 w-[6px]" style={{ background: COLORS.gold }} />
-            <img src={imgOffice} alt="Escritório" className="w-full h-[500px] object-cover" />
+            <div className="absolute -left-[10px] top-6 bottom-6 w-[6px]" style={{ background: COLORS.gold }} />
+            <div className="absolute -right-[10px] top-6 bottom-6 w-[6px]" style={{ background: COLORS.gold }} />
+            <img src={imgOffice} alt="Escritório" className="w-full h-[550px] object-cover shadow-xl" />
           </div>
           <div className="w-1/2">
-            <div className="p-8" style={{ background: COLORS.dark }}>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: 24, lineHeight: 1.5 }}>
+            <div className="p-12" style={{ background: COLORS.dark }}>
+              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: 26, lineHeight: 1.5 }}>
                 Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
               </p>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-4" style={{ fontSize: 24, lineHeight: 1.5 }}>
+              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-6" style={{ fontSize: 26, lineHeight: 1.5 }}>
                 Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
               </p>
             </div>
@@ -184,20 +202,23 @@ const practiceAreas = [
 
 function PracticeAreas() {
   return (
-    <section id="atuacao" style={{ background: COLORS.light }} className="pb-0 md:pb-20">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 pt-10 md:pt-0">
+    <section id="atuacao" className="relative py-[80px] md:py-[120px] overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img src={imgHeroBg} alt="" className="w-full h-full object-cover grayscale opacity-10" />
+      </div>
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6">
         <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
           Atuamos em diferentes áreas do Direito, com foco em demandas que exigem leitura de cenário, responsabilidade decisória e condução técnica consistente.
         </h2>
       </div>
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6 mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {practiceAreas.map((area) => (
-          <div key={area.title} className="p-6 md:p-8 flex flex-col" style={{ background: COLORS.dark }}>
-            <div className="h-[3px] md:h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.blue }} />
-            <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] whitespace-pre-line" style={{ fontSize: "clamp(28px, 3vw, 32px)", lineHeight: "28px" }}>
+          <div key={area.title} className="p-8 md:p-10 flex flex-col shadow-lg transition-transform hover:-translate-y-1" style={{ background: COLORS.dark }}>
+            <div className="h-[4px] w-[60px] mb-6" style={{ background: COLORS.blue }} />
+            <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] whitespace-pre-line" style={{ fontSize: "clamp(24px, 2.5vw, 28px)", lineHeight: 1.2 }}>
               {area.title}
             </h3>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3 md:mt-4" style={{ fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.5 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9]/80 mt-6" style={{ fontSize: "clamp(14px, 1.3vw, 15px)", lineHeight: 1.6 }}>
               {area.desc}
             </p>
           </div>
@@ -209,31 +230,40 @@ function PracticeAreas() {
 
 function Methodology() {
   const steps = [
-    { title: "Análise", desc: "Leitura aprofundada do caso, do contexto jurídico e dos riscos envolvidos." },
-    { title: "Estratégia", desc: "Definição do caminho jurídico mais adequado, considerando objetivos, cenários possíveis e impactos de curto, médio e longo prazo." },
-    { title: "Condução", desc: "Condução técnica das medidas necessárias, com acompanhamento responsável e comunicação clara ao longo de todo o processo." },
+    { num: "01", title: "Análise", desc: "Leitura aprofundada do caso, do contexto jurídico e dos riscos envolvidos." },
+    { num: "02", title: "Estratégia", desc: "Definição do caminho jurídico mais adequado, considerando objetivos, cenários possíveis e impactos de curto, médio e longo prazo." },
+    { num: "03", title: "Condução", desc: "Condução técnica das medidas necessárias, com acompanhamento responsável e comunicação clara ao longo de todo o processo." },
   ];
 
   return (
-    <section className="relative overflow-hidden" style={{ background: COLORS.dark }}>
-      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
-      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col lg:flex-row gap-8 md:gap-12">
-        <div className="lg:w-1/2">
+    <section className="relative overflow-hidden py-[80px] md:py-[120px]" style={{ background: COLORS.dark }}>
+      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10" />
+      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6">
+        <div className="max-w-[800px]">
           <h2 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
             Nossa atuação jurídica é estruturada a partir de três eixos fundamentais:
           </h2>
-          <div className="h-[4px] w-full max-w-[312px] md:max-w-[430px] mt-4 md:mt-6" style={{ background: COLORS.blue }} />
+          <div className="h-[4px] w-[150px] mt-6" style={{ background: COLORS.blue }} />
         </div>
-        <div className="lg:w-1/2 flex flex-col gap-0">
-          {steps.map((step) => (
-            <div key={step.title} className="relative p-6 md:p-8" style={{ background: COLORS.accent }}>
-              <div className="h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.dark }} />
-              <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(28px, 3vw, 32px)" }}>
-                {step.title}
-              </h3>
-              <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-2" style={{ fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.5 }}>
-                {step.desc}
-              </p>
+
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
+          {steps.map((step, idx) => (
+            <div key={step.title} className="relative group">
+              {/* Connector line on desktop */}
+              {idx < steps.length - 1 && (
+                <div className="hidden md:block absolute top-[50px] right-0 w-[50px] h-[1px] border-t border-dashed border-[#d9d9d9]/30 z-10" />
+              )}
+              <div className="p-8 md:p-10 md:border-r border-[#d9d9d9]/10 last:border-0 h-full flex flex-col">
+                <span className="font-['Cormorant_Garamond',serif] text-[#928F61] block mb-4 italic opacity-80" style={{ fontSize: 42 }}>
+                  {step.num}
+                </span>
+                <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(24px, 2.5vw, 28px)" }}>
+                  {step.title}
+                </h3>
+                <p className="font-['Inter',sans-serif] text-[#d9d9d9]/70 mt-4" style={{ fontSize: "clamp(14px, 1.3vw, 15px)", lineHeight: 1.6 }}>
+                  {step.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -265,25 +295,28 @@ const lawyers = [
 
 function Lawyers() {
   return (
-    <section id="advogados" style={{ background: COLORS.light }} className="py-12 md:py-20">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-12" style={{ fontSize: "clamp(34px, 4vw, 40px)", lineHeight: 1.15 }}>
+    <section id="advogados" style={{ background: COLORS.light }} className="relative py-[80px] md:py-[120px] overflow-hidden">
+      <NWWatermark className="absolute top-1/2 right-0 -translate-y-1/2 w-[100%] h-auto text-[#000] rotate-12" />
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6">
+        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-12 md:mb-16" style={{ fontSize: "clamp(34px, 4vw, 40px)", lineHeight: 1.15 }}>
           Advogados
         </h2>
 
         {/* Desktop: all 3 lawyers */}
-        <div className="hidden md:grid grid-cols-3 gap-8">
+        <div className="hidden md:grid grid-cols-3 gap-12">
           {lawyers.map((l) => (
             <div key={l.name}>
-              <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover grayscale" />
-              <div className="h-[4px] w-full mt-4" style={{ background: COLORS.blue }} />
-              <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px" }}>
+              <div className="relative overflow-hidden group">
+                <img src={l.photo} alt={l.name} className="w-full h-[450px] object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" />
+              </div>
+              <div className="h-[4px] w-[60px] mt-6" style={{ background: COLORS.blue }} />
+              <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-4" style={{ fontSize: 30, lineHeight: 1.1 }}>
                 {l.name}
               </h3>
-              <p className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
+              <p className="font-['Cormorant_Garamond',serif] text-[#949060] mt-1 italic" style={{ fontSize: 18 }}>
                 {l.oab}
               </p>
-              <p className="font-['Inter',sans-serif] text-[#32353A] mt-4 whitespace-pre-line" style={{ fontSize: 14, lineHeight: 1.6 }}>
+              <p className="font-['Inter',sans-serif] text-[#32353A]/80 mt-6 whitespace-pre-line" style={{ fontSize: 14, lineHeight: 1.7 }}>
                 {l.bio}
               </p>
             </div>
@@ -293,11 +326,11 @@ function Lawyers() {
         {/* Mobile: featured lawyer (Paulo Waterloo) */}
         <div className="md:hidden">
           <img src={lawyers[1].photo} alt={lawyers[1].name} className="w-full h-[360px] object-cover grayscale" />
-          <div className="h-[3px] w-full mt-4" style={{ background: COLORS.blue }} />
+          <div className="h-[3px] w-[60px] mt-4" style={{ background: COLORS.blue }} />
           <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px" }}>
             {lawyers[1].name}
           </h3>
-          <p className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-1" style={{ fontSize: 18 }}>
+          <p className="font-['Cormorant_Garamond',serif] text-[#949060] mt-1" style={{ fontSize: 18 }}>
             {lawyers[1].oab}
           </p>
           <p className="font-['Inter',sans-serif] text-[#32353A] mt-4 whitespace-pre-line" style={{ fontSize: 13, lineHeight: 1.6 }}>
@@ -312,9 +345,9 @@ function Lawyers() {
 function Quote() {
   return (
     <section className="relative overflow-hidden" style={{ background: COLORS.dark }}>
-      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
-      <div className="absolute inset-0" style={{ background: COLORS.gold, opacity: 0.15 }} />
-      <div className="relative max-w-[800px] mx-auto px-6 py-16 md:py-24 text-center">
+      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
+      <div className="absolute inset-0" style={{ background: COLORS.gold, opacity: 0.1 }} />
+      <div className="relative max-w-[800px] mx-auto px-6 py-[80px] md:py-[120px] text-center">
         <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.4 }}>
           Comunicamos pouco, mas dizemos muito.<br />
           Não gritamos autoridade. Sustentamos.
@@ -335,8 +368,8 @@ function Contact() {
   const [form, setForm] = useState({ nome: "", email: "", assunto: "", mensagem: "" });
 
   return (
-    <section id="contato" style={{ background: COLORS.light }} className="py-12 md:py-20">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-10 md:gap-12">
+    <section id="contato" style={{ background: COLORS.light }} className="py-[80px] md:py-[120px]">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-12 md:gap-16">
         {/* Contact Form */}
         <div className="lg:w-1/2">
           <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-2 md:mb-4" style={{ fontSize: "clamp(26px, 3vw, 40px)" }}>
@@ -410,7 +443,7 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer style={{ background: COLORS.dark }} className="relative overflow-hidden">
+    <footer style={{ background: COLORS.dark }} className="relative overflow-hidden py-[60px] md:py-[100px]">
       <div className="absolute top-0 left-0 right-0 h-[6px]" style={{ background: COLORS.gold }} />
       <img src={imgFooterBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10" />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-10 md:py-16 flex flex-col lg:flex-row gap-8 md:gap-12">
