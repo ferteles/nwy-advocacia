@@ -1,11 +1,20 @@
+# NWY Advocacia
 
-  # Sem título
+NWY Advocacia - Assessoria jurídica de excelência.
 
-  This is a code bundle for Sem título. The original project is available at https://www.figma.com/design/VexavOSyhZaeuPE8y9S8oU/Sem-t%C3%ADtulo.
+Este projeto é um site institucional para o escritório NWY Advocacia.
 
-  ## Running the code
+## Configurações Atuais
+- **SEO**: Título e meta tags configurados.
+- **Privacidade**: Acesso de robôs de busca (Google, etc) bloqueado via `robots.txt` e meta tags (noindex) por enquanto.
 
-  Run `npm i` to install the dependencies.
+## Tecnologias
+- Vite
+- React
+- Tailwind CSS
 
-  Run `npm run dev` to start the development server.
-  
+## Desenvolvimento
+```bash
+npm install
+npm run dev
+```
