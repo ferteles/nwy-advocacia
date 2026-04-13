@@ -118,68 +118,73 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={imgHeroBg} alt="" className="w-full h-full object-cover opacity-5" />
-      </div>
-      <NWWatermark className="text-[#000]" />
-      <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.dark }} />
-      <div className="absolute bottom-[50px] md:bottom-[60px] left-0 right-0 h-[36px] md:h-[60px] opacity-80" style={{ background: COLORS.gold }} />
-      <div className="relative max-w-7xl mx-auto px-4 md:px-6 w-full py-[120px] md:py-[150px]">
-        <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
-          <h1 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#1A1A1A]" style={{ fontSize: "clamp(32px, 4.5vw, 48px)", lineHeight: 1.05 }}>
-            Condução jurídica de casos que exigem estruturação estratégica e responsabilidade na tomada de decisões.
-          </h1>
-          <p className="mt-5 md:mt-8 font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80" style={{ fontSize: "clamp(15px, 2vw, 18px)", lineHeight: 1.6 }}>
-            Prática construída a partir de experiência sólida em contextos que exigem responsabilidade, planejamento e tomada de decisões conscientes.
-          </p>
-          <a href="#contato" className="inline-block mt-8 md:mt-10 font-['Inter',sans-serif] text-[#1A1A1A] border-b-[3px] border-[#A07C3D] pb-1 hover:opacity-70 transition font-semibold" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
-            Entrar em Contato
-          </a>
+    <>
+      <section className="relative min-h-[75vh] flex items-center overflow-hidden bg-white z-10">
+        <NWWatermark className="text-[#000]" />
+        <div className="relative max-w-7xl mx-auto px-4 md:px-6 w-full py-[120px] md:py-[150px]">
+          <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
+            <h1 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#1A1A1A]" style={{ fontSize: "clamp(32px, 4.5vw, 48px)", lineHeight: 1.05 }}>
+              Condução jurídica de casos que exigem estruturação estratégica e responsabilidade na tomada de decisões.
+            </h1>
+            <p className="mt-5 md:mt-8 font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80" style={{ fontSize: "clamp(15px, 2vw, 18px)", lineHeight: 1.6 }}>
+              Prática construída a partir de experiência sólida em contextos que exigem responsabilidade, planejamento e tomada de decisões conscientes.
+            </p>
+            <a href="#contato" className="inline-block mt-8 md:mt-10 font-['Inter',sans-serif] text-[#1A1A1A] border-b-[3px] border-[#A07C3D] pb-1 hover:opacity-70 transition font-semibold" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
+              Entrar em Contato
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Decorative Transition Bars (Figma Sync) */}
+      <div className="w-full flex flex-col z-0">
+        {/* Band 1: Charcoal Dark */}
+        <div className="w-full h-[60px] md:h-[90px]" style={{ background: COLORS.darkAlt }} />
+        {/* Band 2: Deep Gold */}
+        <div className="w-full h-[70px] md:h-[100px]" style={{ background: COLORS.gold }} />
+        {/* Band 3: Dark Overlay with Congress Background and Blue Accent Strip */}
+        <div className="relative w-full h-[200px] md:h-[280px] flex items-center" style={{ background: COLORS.dark }}>
+          <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 mix-blend-overlay" />
+          <div className="relative z-10 w-full h-[25px] md:h-[35px]" style={{ background: COLORS.accent, opacity: 0.9 }} />
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
 function About() {
   return (
-    <section id="escritorio" className="relative overflow-hidden py-[80px] md:py-[120px]">
-      {/* Dark bar behind image on desktop */}
-      <div className="hidden lg:block absolute left-0 top-0 w-full h-[689px]" style={{ background: COLORS.dark }} />
+    <section id="escritorio" className="relative overflow-hidden pt-[80px] md:pt-[120px] pb-[80px] md:pb-[120px] bg-white">
+      {/* Mobile layout */}
       <div className="block lg:hidden" style={{ background: COLORS.light }}>
-        <div className="px-4 pt-8 pb-0">
-          <div className="relative">
+        <div className="px-4 pt-10 pb-10">
+          <div className="relative mb-8">
             <div className="absolute right-0 top-0 bottom-0 w-[4px]" style={{ background: COLORS.gold }} />
             <img src={imgOffice} alt="Escritório" className="w-full h-[300px] object-cover" />
           </div>
-        </div>
-      </div>
-      <div className="block lg:hidden" style={{ background: COLORS.dark }}>
-        <div className="px-4 py-10">
-          <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: 22, lineHeight: 1.5 }}>
+          <p className="font-['Cormorant_Garamond',serif] text-[#1A1A1A]" style={{ fontSize: 24, lineHeight: 1.5 }}>
             Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
           </p>
-          <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-4" style={{ fontSize: 22, lineHeight: 1.5 }}>
+          <p className="font-['Cormorant_Garamond',serif] font-semibold text-[#1A1A1A] mt-6" style={{ fontSize: 24, lineHeight: 1.5 }}>
             Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
           </p>
         </div>
       </div>
 
       {/* Desktop layout */}
-      <div className="hidden lg:block relative" style={{ background: COLORS.light }}>
-        <div className="max-w-7xl mx-auto px-6 py-20 flex gap-16 items-center">
+      <div className="hidden lg:block relative bg-white">
+        <div className="max-w-7xl mx-auto px-6 flex gap-16 items-center">
           <div className="w-1/2 relative">
             <div className="absolute -left-[10px] top-6 bottom-6 w-[6px]" style={{ background: COLORS.gold }} />
             <div className="absolute -right-[10px] top-6 bottom-6 w-[6px]" style={{ background: COLORS.gold }} />
             <img src={imgOffice} alt="Escritório" className="w-full h-[550px] object-cover shadow-xl" />
           </div>
           <div className="w-1/2">
-            <div className="p-12" style={{ background: COLORS.dark }}>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: 26, lineHeight: 1.5 }}>
+            <div className="p-12 pl-6 bg-transparent">
+              <p className="font-['Cormorant_Garamond',serif] text-[#1A1A1A]" style={{ fontSize: 30, lineHeight: 1.5 }}>
                 Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
               </p>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-6" style={{ fontSize: 26, lineHeight: 1.5 }}>
+              <p className="font-['Cormorant_Garamond',serif] font-semibold text-[#1A1A1A] mt-8" style={{ fontSize: 30, lineHeight: 1.5 }}>
                 Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
               </p>
             </div>
