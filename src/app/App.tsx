@@ -8,8 +8,7 @@ import imgGabriela from "../assets/images/gabriela-nepomuceno.png";
 import imgPaulo from "../assets/images/paulo-waterloo.png";
 import imgAtalita from "../assets/images/atalita-yamamoto.png";
 import imgFooterBg from "../assets/images/footer-bg.png";
-import imgMapMask from "../assets/images/map-mask.png";
-import imgMapContent from "../assets/images/map-content.png";
+
 
 const COLORS = {
   dark: "#3D4756",
@@ -388,9 +387,18 @@ function Contact() {
                 <p>Brasília - DF</p>
                 <p className="mt-2">61 9 9882 7844</p>
               </div>
-              <div className="relative mt-5 md:mt-6 w-full h-[250px] md:h-[350px] overflow-hidden">
-                <img src={imgMapMask} alt="Localização" className="w-full h-full object-cover" />
-                <img src={imgMapContent} alt="" className="absolute top-[26%] left-[52%] w-[59%] h-auto" />
+              <div className="relative mt-5 md:mt-6 w-full h-[250px] md:h-[350px] overflow-hidden border border-[#32353A]/10 rounded-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15356.123230485966!2d-47.893178!3d-15.791280999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b3c2a6e99f3%3A0x82609d19eae687e1!2sShopping%20Conjunto%20Nacional!5e0!3m2!1spt-BR!2sbr!4v1744530606061!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização NWY Advocacia"
+                  className="grayscale hover:grayscale-0 transition-all duration-700"
+                />
               </div>
             </div>
           </div>
