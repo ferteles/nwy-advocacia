@@ -143,6 +143,14 @@
     line-height: 1.5;
   }
 
+  p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+  }
+
   h2 {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);

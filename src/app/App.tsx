@@ -170,10 +170,10 @@ function About() {
       </div>
       <div className="block lg:hidden" style={{ background: COLORS.dark }}>
         <div className="px-4 py-10">
-          <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: 22, lineHeight: 1.5 }}>
+          <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: 22, lineHeight: 1.5 }}>
             Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
           </p>
-          <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-4" style={{ fontSize: 22, lineHeight: 1.5 }}>
+          <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: 22, lineHeight: 1.5 }}>
             Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
           </p>
         </div>
@@ -192,10 +192,10 @@ function About() {
             </div>
             {/* Texto: inicia em y=120+220=340 → 90px dentro da banda escura */}
             <div className="flex-1 relative" style={{ zIndex: 1, paddingTop: 220, paddingLeft: 64 }}>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7]" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
+              <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
                 Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
               </p>
-              <p className="font-['Cormorant_Garamond',serif] text-[#dadad7] mt-6" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
+              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-6" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
                 Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
               </p>
             </div>
@@ -324,7 +324,7 @@ function Lawyers() {
               <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px" }}>
                 {l.name}
               </h3>
-              <p className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
+              <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
                 {l.oab}
               </p>
               <p className="font-['Inter',sans-serif] text-[#32353A] mt-4 whitespace-pre-line" style={{ fontSize: 14, lineHeight: 1.6 }}>
@@ -341,7 +341,7 @@ function Lawyers() {
           <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px" }}>
             {lawyers[1].name}
           </h3>
-          <p className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-1" style={{ fontSize: 18 }}>
+          <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 18 }}>
             {lawyers[1].oab}
           </p>
           <p className="font-['Inter',sans-serif] text-[#32353A] mt-4 whitespace-pre-line" style={{ fontSize: 13, lineHeight: 1.6 }}>
@@ -377,15 +377,15 @@ function Quote() {
           <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
           {/* Texto acima da faixa dourada */}
           <div className="relative px-10 md:px-16 py-14 md:py-20" style={{ zIndex: 4 }}>
-            <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9]" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
               Comunicamos pouco, mas dizemos muito.<br />
               Não gritamos autoridade. Sustentamos.
             </p>
-            <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
               Atuamos com postura segura, estratégica, discreta e precisa.<br className="hidden md:inline" />
               {" "}Não utilizamos o medo como argumento nem a urgência como ferramenta.
             </p>
-            <p className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
               Preferimos clareza, precisão e direção.
             </p>
           </div>
