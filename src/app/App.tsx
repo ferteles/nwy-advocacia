@@ -99,12 +99,44 @@ function Navbar() {
   );
 }
 
+function WatermarkHero() {
+  return (
+    <div className="absolute top-0 left-[-5%] w-[110%] h-[120%] overflow-hidden pointer-events-none z-0 opacity-10 flex items-start justify-center pt-10">
+      <svg className="w-full min-w-[1200px] h-auto" fill="none" viewBox="0 0 1648 708">
+        <path d={svgPaths.p10a4400} fill={COLORS.dark} />
+        <path d={svgPaths.p160b7800} fill={COLORS.dark} />
+        <path d={svgPaths.p14415570} fill={COLORS.dark} />
+        <path d={svgPaths.p2db37200} fill={COLORS.dark} />
+        <path d={svgPaths.p2d8b55c0} fill={COLORS.dark} />
+        <path d={svgPaths.p1052f500} fill={COLORS.dark} />
+        <path d={svgPaths.p36f495b8} fill={COLORS.dark} />
+        <path d={svgPaths.p9a69900} fill={COLORS.dark} />
+      </svg>
+    </div>
+  );
+}
+
+function WatermarkFooter() {
+  return (
+    <div className="absolute bottom-0 right-[-10%] w-[120%] h-[150%] overflow-hidden pointer-events-none z-0 opacity-[0.03] flex items-end justify-center pb-0">
+      <svg className="w-full min-w-[1500px] h-auto grayscale" fill="none" viewBox="0 0 1648 708">
+        <path d={svgPaths.p10a4400} fill={COLORS.dark} />
+        <path d={svgPaths.p160b7800} fill={COLORS.dark} />
+        <path d={svgPaths.p14415570} fill={COLORS.dark} />
+        <path d={svgPaths.p2db37200} fill={COLORS.dark} />
+        <path d={svgPaths.p2d8b55c0} fill={COLORS.dark} />
+        <path d={svgPaths.p1052f500} fill={COLORS.dark} />
+        <path d={svgPaths.p36f495b8} fill={COLORS.dark} />
+        <path d={svgPaths.p9a69900} fill={COLORS.dark} />
+      </svg>
+    </div>
+  );
+}
+
 function Hero() {
   return (
     <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={imgHeroBg} alt="" className="w-full h-full object-cover opacity-15" />
-      </div>
+      <WatermarkHero />
       <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.dark }} />
       <div className="absolute bottom-[50px] md:bottom-[60px] left-0 right-0 h-[36px] md:h-[60px] opacity-80" style={{ background: COLORS.gold }} />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full pt-[80px] md:pt-[100px]">
@@ -155,8 +187,8 @@ function About() {
           <div className="flex items-start">
             {/* Imagem: inicia em y=120, 130px acima da banda escura */}
             <div className="relative flex-shrink-0" style={{ width: '40%', zIndex: 1 }}>
-              <div className="absolute left-0 top-0 bottom-0 w-[6px]" style={{ background: COLORS.gold }} />
-              <img src={imgOffice} alt="Escritório" className="w-full object-cover" style={{ height: 640 }} />
+              <div className="absolute left-0 top-0 bottom-0 w-[40px]" style={{ background: COLORS.gold, zIndex: 2 }} />
+              <img src={imgOffice} alt="Escritório" className="w-full object-cover relative" style={{ height: 640 }} />
             </div>
             {/* Texto: inicia em y=120+220=340 → 90px dentro da banda escura */}
             <div className="flex-1 relative" style={{ zIndex: 1, paddingTop: 220, paddingLeft: 64 }}>
@@ -193,8 +225,7 @@ function PracticeAreas() {
           Atuamos em diferentes áreas do Direito, com foco em demandas que exigem leitura de cenário, responsabilidade decisória e condução técnica consistente.
         </h2>
       </div>
-      {/* Grid: primeiros 6 em 3 colunas, últimos 2 em 2 colunas mais largas */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-0">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8">
         {practiceAreas.map((area, i) => (
           <div
             key={area.title}
@@ -368,8 +399,9 @@ function Contact() {
   const [form, setForm] = useState({ nome: "", email: "", assunto: "", mensagem: "" });
 
   return (
-    <section id="contato" style={{ background: COLORS.light }} className="py-12 md:py-20">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-10 md:gap-12">
+    <section id="contato" style={{ background: COLORS.light }} className="py-12 md:py-20 relative overflow-hidden">
+      <WatermarkFooter />
+      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-10 md:gap-12 z-10">
         {/* Contact Form */}
         <div className="lg:w-1/2">
           <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-2 md:mb-4" style={{ fontSize: "clamp(26px, 3vw, 40px)" }}>
@@ -444,9 +476,10 @@ function Contact() {
 function Footer() {
   return (
     <footer style={{ background: COLORS.dark }} className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[6px]" style={{ background: COLORS.gold }} />
+      <div className="absolute top-0 left-0 right-0 h-[6px]" style={{ background: COLORS.gold, zIndex: 10 }} />
       <img src={imgFooterBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10" />
-      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-10 md:py-16 flex flex-col lg:flex-row gap-8 md:gap-12">
+      <div className="absolute inset-0 rotate-180 mix-blend-overlay opacity-10"><WatermarkFooter /></div>
+      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-10 md:py-16 flex flex-col lg:flex-row gap-8 md:gap-12 z-10">
         <div className="lg:w-1/3">
           <Logo color="#D9D9D9" className="w-[100px] md:w-[120px] h-auto" />
         </div>
