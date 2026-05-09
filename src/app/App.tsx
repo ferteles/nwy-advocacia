@@ -2,9 +2,9 @@ import { useState } from "react";
 import svgPaths from "../imports/svg-ttosx3q9hh";
 
 // Project images
-import imgHeroBg from "../assets/images/hero-bg-pattern.png";
+import imgHeroBg from "../assets/images/hero1920x1080.gif";
 import imgOffice from "../assets/images/office-building.png";
-import imgPaulo from "../assets/images/paulo-waterloo-new.png";
+import imgPaulo from "../assets/images/paulo-prov.jpeg";
 import imgFooterBg from "../assets/images/footer-bg.png";
 
 
