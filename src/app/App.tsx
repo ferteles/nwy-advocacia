@@ -152,7 +152,8 @@ function WatermarkFooter() {
 
 function Hero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
+    <>
+      <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
       <WatermarkHero />
       <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.dark }} />
       <div className="absolute bottom-[50px] md:bottom-[60px] left-0 right-0 h-[36px] md:h-[60px] opacity-80" style={{ background: COLORS.gold }} />
@@ -168,7 +169,8 @@ function Hero() {
             Entrar em Contato
           </a>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Decorative Transition Bars (Figma Sync) */}
       <div className="w-full flex flex-col z-0">
