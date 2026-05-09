@@ -4,9 +4,7 @@ import svgPaths from "../imports/svg-ttosx3q9hh";
 // Project images
 import imgHeroBg from "../assets/images/hero-bg-pattern.png";
 import imgOffice from "../assets/images/office-building.png";
-import imgGabriela from "../assets/images/gabriela-nepomuceno.png";
-import imgPaulo from "../assets/images/paulo-waterloo.png";
-import imgAtalita from "../assets/images/atalita-yamamoto.png";
+import imgPaulo from "../assets/images/paulo-waterloo-new.png";
 import imgFooterBg from "../assets/images/footer-bg.png";
 
 
@@ -332,22 +330,10 @@ function Methodology() {
 
 const lawyers = [
   {
-    name: "Gabriela Nepomuceno",
-    oab: "OAB 76383 - DF",
-    photo: imgGabriela,
-    bio: "Lorem ipsum dolor sit amet consectetur. Velit penatibus lectus nec turpis. Mattis semper lorem sociis nec eget arcu sed lectus aliquam.",
-  },
-  {
     name: "Paulo Waterloo",
     oab: "OAB 76383 - DF",
     photo: imgPaulo,
     bio: "Especialista em Direito Militar e Administração Pública, com sólida experiência em demandas administrativas e judiciais envolvendo a União perante o TRF-1 e em procedimentos conduzidos pelo Ministério Público Federal.\n\nAtuação consistente no assessoramento em Inquéritos Policiais Militares, Conselhos de Justificação e de Disciplina, além de procedimentos administrativos no âmbito das Forças Armadas e das forças auxiliares, bem como em ações penais perante a Justiça Militar.\nExperiência na defesa em Comissões Parlamentares de Inquérito.\n\nAtuação em demandas de Direito Administrativo, Penal, Civil e Previdenciário.",
-  },
-  {
-    name: "Atalita Yamamoto",
-    oab: "OAB 76383 - DF",
-    photo: imgAtalita,
-    bio: "Lorem ipsum dolor sit amet consectetur. Velit penatibus lectus nec turpis. Mattis semper lorem sociis nec eget arcu sed lectus aliquam.",
   },
 ];
 
@@ -359,37 +345,39 @@ function Lawyers() {
           Advogados
         </h2>
 
-        {/* Desktop: all 3 lawyers */}
-        <div className="hidden md:grid grid-cols-3 gap-12">
-          {lawyers.map((l) => (
-            <div key={l.name}>
-              <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover grayscale" />
-              <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
-              <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px" }}>
-                {l.name}
-              </h3>
-              <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
-                {l.oab}
-              </p>
-              <p className="font-['Inter',sans-serif] text-[#1A1A1A]/80 mt-6 whitespace-pre-line" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                {l.bio}
-              </p>
-            </div>
-          ))}
+        {/* Desktop: center the lawyer card */}
+        <div className="hidden md:flex justify-center">
+          <div className="max-w-[400px]">
+            {lawyers.map((l) => (
+              <div key={l.name}>
+                <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover grayscale" />
+                <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
+                <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px" }}>
+                  {l.name}
+                </h3>
+                <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
+                  {l.oab}
+                </p>
+                <p className="font-['Inter',sans-serif] text-[#1A1A1A]/80 mt-6 whitespace-pre-line" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  {l.bio}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Mobile: featured lawyer (Paulo Waterloo) */}
         <div className="md:hidden">
-          <img src={lawyers[1].photo} alt={lawyers[1].name} className="w-full h-[360px] object-cover grayscale" />
+          <img src={lawyers[0].photo} alt={lawyers[0].name} className="w-full h-[360px] object-cover grayscale" />
           <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
           <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px" }}>
-            {lawyers[1].name}
+            {lawyers[0].name}
           </h3>
           <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 18 }}>
-            {lawyers[1].oab}
+            {lawyers[0].oab}
           </p>
           <p className="font-['Inter',sans-serif] text-[#32353A] mt-4 whitespace-pre-line" style={{ fontSize: 13, lineHeight: 1.6 }}>
-            {lawyers[1].bio}
+            {lawyers[0].bio}
           </p>
         </div>
       </div>
