@@ -2,7 +2,7 @@ import { useState } from "react";
 import svgPaths from "../imports/svg-ttosx3q9hh";
 
 // Project images
-import imgHeroBg from "../assets/images/hero1920x1080.gif";
+import videoHero from "../assets/images/hero1920x1080-converter.mp4";
 import imgOffice from "../assets/images/office-building.png";
 import imgPaulo from "../assets/images/paulo-prov.jpeg";
 import imgFooterBg from "../assets/images/footer-bg.png";
@@ -156,8 +156,16 @@ function WatermarkFooter() {
 function Hero() {
   return (
     <div className="relative overflow-hidden">
-      {/* Fundo Único com o GIF para todo o bloco Hero */}
-      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" style={{ zIndex: 0 }} />
+      {/* Fundo Único com o Vídeo MP4 para todo o bloco Hero */}
+      <video
+        src={videoHero}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+        style={{ zIndex: 0 }}
+      />
       
       <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden z-10">
         <WatermarkHero />
@@ -289,7 +297,14 @@ function Methodology() {
 
   return (
     <section className="relative overflow-hidden" style={{ background: COLORS.cardBg }}>
-      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+      <video
+        src={videoHero}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-25"
+      />
       {/* Faixa dourada vertical no desktop, posicionada após a coluna esquerda */}
       <div
         className="hidden lg:block absolute top-0 bottom-0"
@@ -403,8 +418,15 @@ function Quote() {
         }}
       >
         <div className="relative overflow-hidden" style={{ background: COLORS.cardBg }}>
-          {/* Padrão de fundo dentro da caixa escura */}
-          <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
+          {/* Fundo de vídeo dentro da caixa escura */}
+          <video
+            src={videoHero}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-20"
+          />
           {/* Texto acima da faixa dourada */}
           <div className="relative px-10 md:px-16 py-14 md:py-20" style={{ zIndex: 4 }}>
             <p className="font-['Inter',sans-serif] text-[#d9d9d9]" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
