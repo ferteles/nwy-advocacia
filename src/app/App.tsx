@@ -173,20 +173,10 @@ function Hero() {
 
       {/* Decorative Transition Bars (Figma Sync) */}
       <div className="w-full flex flex-col relative z-10">
-        {/* Band 1: Charcoal Dark */}
-        <div className="w-full h-[60px] md:h-[90px] opacity-90" style={{ background: COLORS.darkAlt }} />
-        {/* Band 2: Deep Gold */}
-        <div className="w-full h-[50px] md:h-[80px] opacity-80" style={{ background: COLORS.gold }} />
-        
         {/* Band 3: Dark Overlay with Blue Accent Strip */}
         <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: `${COLORS.cardBg}E6` }}> {/* Adding some transparency E6 = 90% */}
           <div className="relative z-10 w-full h-[30px] md:h-[40px]" style={{ background: COLORS.accent }} />
         </div>
-
-        {/* Band 4: Deep Gold (Mirror) */}
-        <div className="w-full h-[50px] md:h-[80px] opacity-80" style={{ background: COLORS.gold }} />
-        {/* Band 5: Charcoal Dark (Mirror) */}
-        <div className="w-full h-[60px] md:h-[90px] opacity-90" style={{ background: COLORS.darkAlt }} />
       </div>
     </div>
   );
