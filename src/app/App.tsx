@@ -83,12 +83,17 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-[70px] md:h-[80px]">
-        <Logo className="w-[70px] md:w-[80px] h-auto" />
-        <div className="hidden md:flex gap-8">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="font-['Inter',sans-serif] text-[#32353A] hover:text-[#5B728E] transition-colors" style={{ fontSize: 18 }}>
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] flex items-center justify-between h-[100px] md:h-[160px]">
+        <Logo className="w-[100px] md:w-[140px] h-auto" color="#1A1A1A" />
+        <div className="hidden md:flex gap-10">
+          {links.map((l, i) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className={`font-['Inter',sans-serif] text-[#1A1A1A] hover:opacity-70 transition-opacity ${i === 0 ? "border-b border-black pb-1" : ""}`}
+              style={{ fontSize: 18, fontWeight: 400 }}
+            >
               {l.label}
             </a>
           ))}
@@ -156,27 +161,30 @@ function Hero() {
       
       <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden z-10">
         <WatermarkHero />
-        <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full pt-[80px] md:pt-[100px]">
-          <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
-            <h1 className="font-['Cormorant_Garamond',serif] text-[#3D4756]" style={{ fontSize: "clamp(30px, 4vw, 42px)", lineHeight: 1.05 }}>
+        <div className="relative max-w-[1440px] mx-auto px-6 md:px-[120px] w-full pt-[120px] md:pt-[160px]">
+          <div className="max-w-[400px] md:max-w-[750px] ml-auto">
+            <h1 className="font-['Cormorant_Garamond',serif] text-[#1A1A1A]" style={{ fontSize: "clamp(32px, 4.5vw, 52px)", lineHeight: 1.1, fontWeight: 400 }}>
               Condução jurídica de casos que exigem estruturação estratégica e responsabilidade na tomada de decisões.
             </h1>
-            <p className="mt-4 md:mt-6 font-['Inter',sans-serif] text-[#3D4756]" style={{ fontSize: "clamp(14px, 2vw, 18px)", lineHeight: 1.5 }}>
+            <p className="mt-6 md:mt-8 font-['Inter',sans-serif] text-[#1A1A1A]/80" style={{ fontSize: "clamp(16px, 1.8vw, 22px)", lineHeight: 1.6 }}>
               Prática construída a partir de experiência sólida em contextos que exigem responsabilidade, planejamento e tomada de decisões conscientes.
             </p>
-            <a href="#contato" className="inline-block mt-5 md:mt-6 font-['Inter',sans-serif] text-[#3D4756] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
+            <a href="#contato" className="inline-block mt-8 md:mt-10 font-['Inter',sans-serif] text-[#1A1A1A] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(18px, 1.8vw, 24px)" }}>
               Entrar em Contato
             </a>
           </div>
         </div>
       </section>
 
-      {/* Decorative Transition Bars (Figma Sync) */}
+      {/* Decorative Transition Bars (Exactly like Screenshot) */}
       <div className="w-full flex flex-col relative z-10">
-        {/* Band 3: Dark Overlay with Blue Accent Strip */}
-        <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: `${COLORS.cardBg}E6` }}> {/* Adding some transparency E6 = 90% */}
-          <div className="relative z-10 w-full h-[30px] md:h-[40px]" style={{ background: COLORS.accent }} />
-        </div>
+        {/* Dark area with GIF (implicit from wrapper) */}
+        <div className="w-full h-[100px] md:h-[150px]" /> 
+        {/* Gold Band */}
+        <div className="w-full h-[50px] md:h-[70px] opacity-90" style={{ background: COLORS.gold }} />
+        {/* Blue Strip */}
+        <div className="w-full h-[20px] md:h-[30px]" style={{ background: COLORS.accent }} />
+        <div className="w-full h-[60px] md:h-[100px]" style={{ background: COLORS.cardBg }} />
       </div>
     </div>
   );
