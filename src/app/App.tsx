@@ -153,7 +153,7 @@ function Hero() {
     <>
       <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
       <WatermarkHero />
-      <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.dark }} />
+      <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.cardBg }} />
       <div className="absolute bottom-[50px] md:bottom-[60px] left-0 right-0 h-[36px] md:h-[60px] opacity-80" style={{ background: COLORS.gold }} />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full pt-[80px] md:pt-[100px]">
         <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
@@ -178,7 +178,7 @@ function Hero() {
         <div className="w-full h-[50px] md:h-[80px]" style={{ background: COLORS.gold }} />
         
         {/* Band 3: Dark Overlay with Congress Background and Blue Accent Strip */}
-        <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: COLORS.dark }}>
+        <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: COLORS.cardBg }}>
           <img src={imgHeroBg} alt="Brasília" className="absolute inset-0 w-full h-full object-cover grayscale opacity-30" />
           <div className="relative z-10 w-full h-[30px] md:h-[40px]" style={{ background: COLORS.accent }} />
         </div>
@@ -266,7 +266,7 @@ function PracticeAreas() {
           <div
             key={area.title}
             className={`p-6 md:p-8 flex flex-col md:col-span-1 ${i < 6 ? "lg:col-span-4" : "lg:col-span-6"}`}
-            style={{ background: COLORS.dark }}
+            style={{ background: COLORS.cardBg }}
           >
             <div className="h-[3px] md:h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.gold }} />
             <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] whitespace-pre-line" style={{ fontSize: "clamp(26px, 2.5vw, 32px)", lineHeight: "30px" }}>
@@ -290,7 +290,7 @@ function Methodology() {
   ];
 
   return (
-    <section className="relative overflow-hidden" style={{ background: COLORS.dark }}>
+    <section className="relative overflow-hidden" style={{ background: COLORS.cardBg }}>
       <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
       {/* Faixa dourada vertical no desktop, posicionada após a coluna esquerda */}
       <div
@@ -404,7 +404,7 @@ function Quote() {
           zIndex: 3,
         }}
       >
-        <div className="relative overflow-hidden" style={{ background: COLORS.dark }}>
+        <div className="relative overflow-hidden" style={{ background: COLORS.cardBg }}>
           {/* Padrão de fundo dentro da caixa escura */}
           <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
           {/* Texto acima da faixa dourada */}
@@ -507,7 +507,7 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer style={{ background: COLORS.dark }} className="relative overflow-hidden">
+    <footer style={{ background: COLORS.cardBg }} className="relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[6px]" style={{ background: COLORS.gold, zIndex: 10 }} />
       <img src={imgFooterBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10" />
       <div className="absolute inset-0 rotate-180 mix-blend-overlay opacity-10"><WatermarkFooter /></div>
