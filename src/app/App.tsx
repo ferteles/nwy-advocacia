@@ -180,7 +180,6 @@ function Hero() {
         
         {/* Band 3: Dark Overlay with Congress Background and Blue Accent Strip */}
         <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: COLORS.cardBg }}>
-          <img src={imgHeroBg} alt="Brasília" className="absolute inset-0 w-full h-full object-cover grayscale opacity-30" />
           <div className="relative z-10 w-full h-[30px] md:h-[40px]" style={{ background: COLORS.accent }} />
         </div>
 
