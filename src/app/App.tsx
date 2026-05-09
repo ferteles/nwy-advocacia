@@ -154,8 +154,6 @@ function Hero() {
       <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
       <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
       <WatermarkHero />
-      <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.cardBg }} />
-      <div className="absolute bottom-[50px] md:bottom-[60px] left-0 right-0 h-[36px] md:h-[60px] opacity-80" style={{ background: COLORS.gold }} />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full pt-[80px] md:pt-[100px]">
         <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
           <h1 className="font-['Cormorant_Garamond',serif] text-[#3D4756]" style={{ fontSize: "clamp(30px, 4vw, 42px)", lineHeight: 1.05 }}>
