@@ -152,6 +152,7 @@ function Hero() {
   return (
     <>
       <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
+      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
       <WatermarkHero />
       <div className="absolute bottom-0 left-0 right-0 h-[50px] md:h-[60px]" style={{ background: COLORS.cardBg }} />
       <div className="absolute bottom-[50px] md:bottom-[60px] left-0 right-0 h-[36px] md:h-[60px] opacity-80" style={{ background: COLORS.gold }} />
