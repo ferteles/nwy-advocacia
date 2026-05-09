@@ -150,43 +150,45 @@ function WatermarkFooter() {
 
 function Hero() {
   return (
-    <>
-      <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
-      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
-      <WatermarkHero />
-      <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full pt-[80px] md:pt-[100px]">
-        <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
-          <h1 className="font-['Cormorant_Garamond',serif] text-[#3D4756]" style={{ fontSize: "clamp(30px, 4vw, 42px)", lineHeight: 1.05 }}>
-            Condução jurídica de casos que exigem estruturação estratégica e responsabilidade na tomada de decisões.
-          </h1>
-          <p className="mt-4 md:mt-6 font-['Inter',sans-serif] text-[#3D4756]" style={{ fontSize: "clamp(14px, 2vw, 18px)", lineHeight: 1.5 }}>
-            Prática construída a partir de experiência sólida em contextos que exigem responsabilidade, planejamento e tomada de decisões conscientes.
-          </p>
-          <a href="#contato" className="inline-block mt-5 md:mt-6 font-['Inter',sans-serif] text-[#3D4756] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
-            Entrar em Contato
-          </a>
+    <div className="relative overflow-hidden">
+      {/* Fundo Único com o GIF para todo o bloco Hero */}
+      <img src={imgHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" style={{ zIndex: 0 }} />
+      
+      <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden z-10">
+        <WatermarkHero />
+        <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 w-full pt-[80px] md:pt-[100px]">
+          <div className="max-w-[340px] md:max-w-[700px] md:ml-auto">
+            <h1 className="font-['Cormorant_Garamond',serif] text-[#3D4756]" style={{ fontSize: "clamp(30px, 4vw, 42px)", lineHeight: 1.05 }}>
+              Condução jurídica de casos que exigem estruturação estratégica e responsabilidade na tomada de decisões.
+            </h1>
+            <p className="mt-4 md:mt-6 font-['Inter',sans-serif] text-[#3D4756]" style={{ fontSize: "clamp(14px, 2vw, 18px)", lineHeight: 1.5 }}>
+              Prática construída a partir de experiência sólida em contextos que exigem responsabilidade, planejamento e tomada de decisões conscientes.
+            </p>
+            <a href="#contato" className="inline-block mt-5 md:mt-6 font-['Inter',sans-serif] text-[#3D4756] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
+              Entrar em Contato
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Decorative Transition Bars (Figma Sync) */}
-      <div className="w-full flex flex-col z-0">
+      <div className="w-full flex flex-col relative z-10">
         {/* Band 1: Charcoal Dark */}
-        <div className="w-full h-[60px] md:h-[90px]" style={{ background: COLORS.darkAlt }} />
+        <div className="w-full h-[60px] md:h-[90px] opacity-90" style={{ background: COLORS.darkAlt }} />
         {/* Band 2: Deep Gold */}
-        <div className="w-full h-[50px] md:h-[80px]" style={{ background: COLORS.gold }} />
+        <div className="w-full h-[50px] md:h-[80px] opacity-80" style={{ background: COLORS.gold }} />
         
-        {/* Band 3: Dark Overlay with Congress Background and Blue Accent Strip */}
-        <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: COLORS.cardBg }}>
+        {/* Band 3: Dark Overlay with Blue Accent Strip */}
+        <div className="relative w-full h-[250px] md:h-[350px] flex items-center" style={{ background: `${COLORS.cardBg}E6` }}> {/* Adding some transparency E6 = 90% */}
           <div className="relative z-10 w-full h-[30px] md:h-[40px]" style={{ background: COLORS.accent }} />
         </div>
 
         {/* Band 4: Deep Gold (Mirror) */}
-        <div className="w-full h-[50px] md:h-[80px]" style={{ background: COLORS.gold }} />
+        <div className="w-full h-[50px] md:h-[80px] opacity-80" style={{ background: COLORS.gold }} />
         {/* Band 5: Charcoal Dark (Mirror) */}
-        <div className="w-full h-[60px] md:h-[90px]" style={{ background: COLORS.darkAlt }} />
+        <div className="w-full h-[60px] md:h-[90px] opacity-90" style={{ background: COLORS.darkAlt }} />
       </div>
-    </>
+    </div>
   );
 }
 
