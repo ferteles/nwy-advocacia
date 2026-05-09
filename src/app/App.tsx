@@ -181,10 +181,10 @@ function Hero() {
         {/* Dark area with GIF (implicit from wrapper) */}
         <div className="w-full h-[100px] md:h-[150px]" /> 
         {/* Gold Band */}
-        <div className="w-full h-[50px] md:h-[70px] opacity-90" style={{ background: COLORS.gold }} />
+        <div className="w-full h-[50px] md:h-[70px] opacity-40" style={{ background: COLORS.gold }} />
         {/* Blue Strip */}
-        <div className="w-full h-[20px] md:h-[30px]" style={{ background: COLORS.accent }} />
-        <div className="w-full h-[60px] md:h-[100px]" style={{ background: COLORS.cardBg }} />
+        <div className="w-full h-[20px] md:h-[30px] opacity-50" style={{ background: COLORS.accent }} />
+        <div className="w-full h-[60px] md:h-[100px] opacity-80" style={{ background: COLORS.cardBg }} />
       </div>
     </div>
   );
