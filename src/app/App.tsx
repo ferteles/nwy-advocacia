@@ -204,7 +204,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="block lg:hidden" style={{ background: COLORS.dark }}>
+      <div className="block lg:hidden" style={{ background: COLORS.cardBg }}>
         <div className="px-4 py-10">
           <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: 22, lineHeight: 1.5 }}>
             Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
@@ -218,7 +218,7 @@ function About() {
       {/* Desktop — banda escura full-width cruza a imagem (fiel ao Figma) */}
       <div className="hidden lg:block relative" style={{ background: COLORS.light }}>
         {/* Banda escura: começa 250px do topo, altura 460px */}
-        <div className="absolute left-0 right-0" style={{ top: 250, height: 460, background: COLORS.dark }} />
+        <div className="absolute left-0 right-0" style={{ top: 250, height: 460, background: COLORS.cardBg }} />
         <div className="relative max-w-[1440px] mx-auto" style={{ paddingTop: 120, paddingBottom: 80, paddingLeft: 120, paddingRight: 120 }}>
           <div className="flex items-start">
             {/* Imagem: inicia em y=120, 130px acima da banda escura */}
