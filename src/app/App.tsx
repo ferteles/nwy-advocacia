@@ -11,7 +11,7 @@ import imgFooterBg from "../assets/images/footer-bg.png";
 const COLORS = {
   dark: "#1A1A1A",
   darkAlt: "#262626",
-  gold: "#A07C3D",
+  gold: "#949060",
   light: "#DADAD7",
   accent: "#5B728E",
   blue: "#5D7B93",
@@ -305,11 +305,6 @@ function Methodology() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-25"
       />
-      {/* Faixa dourada vertical no desktop, posicionada após a coluna esquerda */}
-      <div
-        className="hidden lg:block absolute top-0 bottom-0"
-        style={{ left: "calc(50% + 48px)", width: 182, background: COLORS.gold, opacity: 0.18, zIndex: 0 }}
-      />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col lg:flex-row gap-8 md:gap-12" style={{ zIndex: 1 }}>
         <div className="lg:w-1/2">
           <h2 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
@@ -502,7 +497,7 @@ function Contact() {
               <div className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 space-y-1" style={{ fontSize: "clamp(13px, 1.5vw, 16px)" }}>
                 <p>Shopping Conjunto Nacional, Torre Vermelha, sala 5026</p>
                 <p>Brasília - DF</p>
-                <p className="mt-2 text-[#A07C3D]">61 9 9882 7844</p>
+                <p className="mt-2 text-[#949060]">61 9 9882 7844</p>
               </div>
               <div className="relative mt-5 md:mt-6 w-full h-[250px] md:h-[350px] overflow-hidden border border-[#32353A]/10 rounded-sm">
                 <iframe
@@ -533,11 +528,11 @@ function Footer() {
       <div className="absolute inset-0 rotate-180 mix-blend-overlay opacity-10"><WatermarkFooter /></div>
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-10 md:py-16 flex flex-col lg:flex-row gap-8 md:gap-12 z-10">
         <div className="lg:w-1/3">
-          <Logo color="#A07C3D" className="w-[100px] md:w-[120px] h-auto" />
+          <Logo color="#949060" className="w-[100px] md:w-[120px] h-auto" />
         </div>
         <div className="lg:w-2/3 flex flex-col md:flex-row gap-8 justify-end">
           <div className="flex flex-col gap-2 md:gap-3">
-            <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[#A07C3D] mb-2" style={{ fontSize: 20 }}>Escritório</h4>
+            <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[#949060] mb-2" style={{ fontSize: 20 }}>Escritório</h4>
             {["O Escritório", "Nossa Atuação", "Advogados", "Contato"].map((l) => (
               <a
                 key={l}
@@ -550,7 +545,7 @@ function Footer() {
             ))}
           </div>
           <div className="md:ml-12 border-l border-white/10 pl-0 md:pl-12">
-            <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[#A07C3D] mb-2" style={{ fontSize: 20 }}>Visite</h4>
+            <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[#949060] mb-2" style={{ fontSize: 20 }}>Visite</h4>
             <p className="font-['Inter',sans-serif] font-medium text-white/80" style={{ fontSize: "clamp(14px, 1.5vw, 15px)", lineHeight: 1.6 }}>
               Shopping Conjunto Nacional,<br />Torre Vermelha, sala 5026<br />Brasília - DF
             </p>
