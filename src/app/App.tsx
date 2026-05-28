@@ -4,8 +4,10 @@ import svgPaths from "../imports/svg-ttosx3q9hh";
 // Project images
 import videoHero from "../assets/images/hero1920x1080-converter.mp4";
 import imgOffice from "../assets/images/office-building.png";
-import imgPaulo from "../assets/images/paulo-prov.jpeg";
+import imgPaulo from "../assets/images/paulo-waterloo.png";
 import imgFooterBg from "../assets/images/footer-bg.png";
+import imgFundoComunicamos from "../assets/images/fundo comunicamos.png";
+import imgFundoAtuacao from "../assets/images/fundo-atuacao.png";
 
 
 const COLORS = {
@@ -261,7 +263,7 @@ const practiceAreas = [
 
 function PracticeAreas() {
   return (
-    <section id="atuacao" style={{ background: COLORS.light }} className="pb-0 md:pb-20">
+    <section id="atuacao" style={{ background: COLORS.light }} className="pb-10 md:pb-20">
       <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] pt-10 md:pt-14 pb-8 md:pb-12">
         <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
           Atuamos em diferentes áreas do Direito, com foco em demandas que exigem leitura de cenário, responsabilidade decisória e condução técnica consistente.
@@ -297,12 +299,9 @@ function Methodology() {
 
   return (
     <section className="relative overflow-hidden" style={{ background: COLORS.cardBg }}>
-      <video
-        src={videoHero}
-        autoPlay
-        loop
-        muted
-        playsInline
+      <img
+        src={imgFundoAtuacao}
+        alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-25"
       />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col lg:flex-row gap-8 md:gap-12" style={{ zIndex: 1 }}>
@@ -314,12 +313,12 @@ function Methodology() {
         </div>
 
         {/* Right Side: Vertical Stacked Cards */}
-        <div className="lg:w-1/2 w-full flex flex-col gap-6 md:gap-8 relative">
+        <div className="lg:w-1/2 w-full flex flex-col gap-6 md:gap-8 relative overflow-hidden">
           {/* Vertical Gold Bar Background */}
-          <div className="absolute top-[-60px] bottom-[-60px] left-[20%] w-[120px] md:w-[140px] z-0" style={{ background: COLORS.gold }} />
+          <div className="absolute top-0 bottom-0 left-[20%] w-[120px] md:w-[140px] z-0" style={{ background: COLORS.gold }} />
 
           {steps.map((step) => (
-            <div key={step.title} className="relative p-6 md:p-8" style={{ background: COLORS.accent }}>
+            <div key={step.title} className="relative z-10 p-6 md:p-8" style={{ background: COLORS.accent }}>
               <div className="h-[3px] w-full mb-4 md:mb-5" style={{ background: COLORS.gold }} />
               <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(28px, 3vw, 35px)" }}>
                 {step.title}
@@ -399,40 +398,36 @@ function Quote() {
       {/* Faixa dourada full-width que cruza toda a seção (~45% da altura) */}
       <div
         className="absolute left-0 right-0"
-        style={{ top: "42%", height: 102, background: COLORS.gold, zIndex: 2 }}
+        style={{ top: "42%", height: 102, background: COLORS.gold, zIndex: 0 }}
       />
       {/* Caixa escura centralizada com margens laterais */}
       <div
         className="relative mx-auto"
         style={{
-          marginLeft: "clamp(24px, 9.4vw, 135px)",
-          marginRight: "clamp(24px, 8.3vw, 120px)",
-          marginTop: 80,
-          marginBottom: 80,
+          marginLeft: "clamp(52px, 7vw, 130px)",
+          marginRight: "clamp(52px, 7vw, 130px)",
+          marginTop: 72,
+          marginBottom: 72,
           zIndex: 3,
         }}
       >
-        <div className="relative overflow-hidden" style={{ background: COLORS.cardBg }}>
-          {/* Fundo de vídeo dentro da caixa escura */}
-          <video
-            src={videoHero}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
+        <div className="relative overflow-hidden" style={{ background: "rgb(30, 41, 59)" }}>
+          <img
+            src={imgFundoComunicamos}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: 0.35, zIndex: 0 }}
           />
-          {/* Texto acima da faixa dourada */}
-          <div className="relative px-10 md:px-16 py-14 md:py-20" style={{ zIndex: 4 }}>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9]" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+          <div className="relative px-10 md:px-16 py-14 md:py-20 text-center" style={{ zIndex: 4 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9]" style={{ fontSize: "clamp(15px, 1.6vw, 20px)", lineHeight: 1.7 }}>
               Comunicamos pouco, mas dizemos muito.<br />
               Não gritamos autoridade. Sustentamos.
             </p>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
-              Atuamos com postura segura, estratégica, discreta e precisa.<br className="hidden md:inline" />
-              {" "}Não utilizamos o medo como argumento nem a urgência como ferramenta.
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-6 md:mt-8" style={{ fontSize: "clamp(15px, 1.6vw, 20px)", lineHeight: 1.7 }}>
+              Atuamos com postura segura, estratégica, discreta e precisa.<br />
+              Não utilizamos o medo como argumento nem a urgência como ferramenta.
             </p>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-5 md:mt-6" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-6 md:mt-8" style={{ fontSize: "clamp(15px, 1.6vw, 20px)", lineHeight: 1.7 }}>
               Preferimos clareza, precisão e direção.
             </p>
           </div>
@@ -545,18 +540,18 @@ function Footer() {
             ))}
           </div>
           <div className="md:ml-12 border-l border-white/10 pl-0 md:pl-12">
-            <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[#949060] mb-2" style={{ fontSize: 20 }}>Visite</h4>
-            <p className="font-['Inter',sans-serif] font-medium text-white/80" style={{ fontSize: "clamp(14px, 1.5vw, 15px)", lineHeight: 1.6 }}>
+            <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[#949060] mb-2" style={{ fontSize: "clamp(15px, 2vw, 20px)" }}>Visite</h4>
+            <p className="font-['Inter',sans-serif] font-medium text-white/80" style={{ fontSize: "clamp(11px, 1.5vw, 15px)", lineHeight: 1.6 }}>
               Shopping Conjunto Nacional,<br />Torre Vermelha, sala 5026<br />Brasília - DF
             </p>
-            <p className="font-['Inter',sans-serif] font-medium text-white mt-4" style={{ fontSize: "clamp(14px, 1.5vw, 15px)" }}>61 9 9882 7844</p>
-            <p className="font-['Inter',sans-serif] font-medium text-white/80 mt-1" style={{ fontSize: "clamp(14px, 1.5vw, 15px)" }}>contato@nwyadvocacia.com.br</p>
+            <p className="font-['Inter',sans-serif] font-medium text-white mt-4" style={{ fontSize: "clamp(11px, 1.5vw, 15px)" }}>61 9 9882 7844</p>
+            <p className="font-['Inter',sans-serif] font-medium text-white/80 mt-1" style={{ fontSize: "clamp(11px, 1.5vw, 15px)" }}>contato@nwyadvocacia.com.br</p>
           </div>
         </div>
       </div>
       <div className="relative max-w-7xl mx-auto px-4 md:px-6 border-t border-white/10 pt-6 mt-6 flex justify-between items-center text-white/40 text-[13px]">
         <span>© {new Date().getFullYear()} NWY Advocacia.</span>
-        <span>Desenvolvido por Férteles</span>
+        <span>Desenvolvido por <a href="https://tauatech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">tauatech.com</a></span>
       </div>
     </footer>
   );
