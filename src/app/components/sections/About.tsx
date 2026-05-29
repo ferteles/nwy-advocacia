@@ -14,12 +14,18 @@ export function About() {
         </div>
       </div>
       <div className="block lg:hidden" style={{ background: COLORS.cardBg }}>
-        <div className="px-4 py-10">
-          <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: 22, lineHeight: 1.5 }}>
-            Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
+        <div className="px-4 py-10 space-y-4">
+          <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: 18, lineHeight: 1.5 }}>
+            Nascemos de uma atuação sólida e da experiência em contextos que exigem responsabilidade, planejamento e tomada de decisão consciente.
           </p>
-          <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: 22, lineHeight: 1.5 }}>
-            Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
+          <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: 18, lineHeight: 1.5 }}>
+            Estruturamos nossa prática para atuar de forma independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
+          </p>
+          <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: 18, lineHeight: 1.5 }}>
+            Não atuamos por impulso nem reagimos a problemas já instalados.
+          </p>
+          <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: 18, lineHeight: 1.5 }}>
+            Analisamos cenários, definimos estratégias e conduzimos cada demanda com clareza e controle.
           </p>
         </div>
       </div>
@@ -35,13 +41,19 @@ export function About() {
               <div className="absolute left-0 top-0 bottom-0 w-[40px]" style={{ background: COLORS.gold, zIndex: 2 }} />
               <img src={imgOffice} alt="Escritório" className="w-full object-cover relative" style={{ height: 640 }} />
             </div>
-            {/* Texto: inicia em y=120+220=340 → 90px dentro da banda escura */}
-            <div className="flex-1 relative" style={{ zIndex: 1, paddingTop: 220, paddingLeft: 64 }}>
-              <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
-                Estruturação da prática para atuação independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
+            {/* Texto: inicia em y=120+180=300 → perfeitamente centralizado na banda escura */}
+            <div className="flex-1 relative" style={{ zIndex: 1, paddingTop: 180, paddingLeft: 64 }}>
+              <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+                Nascemos de uma atuação sólida e da experiência em contextos que exigem responsabilidade, planejamento e tomada de decisão consciente.
               </p>
-              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-6" style={{ fontSize: "clamp(18px, 1.7vw, 24px)", lineHeight: 1.6 }}>
-                Análise de cenários, definição de estratégias e condução de cada demanda com clareza e controle.
+              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+                Estruturamos nossa prática para atuar de forma independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
+              </p>
+              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+                Não atuamos por impulso nem reagimos a problemas já instalados.
+              </p>
+              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+                Analisamos cenários, definimos estratégias e conduzimos cada demanda com clareza e controle.
               </p>
             </div>
           </div>

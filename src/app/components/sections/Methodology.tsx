@@ -4,7 +4,7 @@ import { COLORS } from "../../constants/colors";
 const steps = [
   { title: "Análise", desc: "Leitura aprofundada do caso, do contexto jurídico e dos riscos envolvidos." },
   { title: "Estratégia", desc: "Definição do caminho jurídico mais adequado, considerando objetivos, cenários possíveis e impactos de curto, médio e longo prazo." },
-  { title: "Condução", desc: "Condução técnica das medidas necessárias, com acompanhamento responsável e comunicação clara ao longo de todo o processo." },
+  { title: "Condução", desc: "Execução técnica das medidas necessárias, com acompanhamento responsável e comunicação clara ao longo de todo o processo." },
 ];
 
 export function Methodology() {

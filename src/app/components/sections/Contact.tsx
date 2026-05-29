@@ -49,7 +49,7 @@ export function Contact() {
             Contato
           </h2>
           <p className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 mb-5 md:mb-8" style={{ fontSize: "clamp(13px, 1.5vw, 16px)", lineHeight: 1.5 }}>
-            Para informações ou agendamento de conversa inicial, preencha o formulário abaixo.
+            Para informações ou agendamento de conversa inicial, entre em contacto.
           </p>
 
           {/* Campo invisível Honeypot para proteção contra Bots */}
@@ -121,8 +121,7 @@ export function Contact() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localização NWY Advocacia"
-                  className="grayscale hover:grayscale-0 transition-all duration-700"
+                  title="Localização NWY Advogados"
                 />
               </div>
             </div>

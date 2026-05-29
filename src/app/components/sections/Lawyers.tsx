@@ -23,9 +23,9 @@ export function Lawyers() {
           <div className="max-w-[400px]">
             {lawyers.map((l) => (
               <div key={l.name}>
-                <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover grayscale" />
+                <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover rounded-sm" />
                 <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
-                <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px" }}>
+                <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px", fontWeight: 600 }}>
                   {l.name}
                 </h3>
                 <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
@@ -41,9 +41,9 @@ export function Lawyers() {
 
         {/* Mobile: featured lawyer (Paulo Waterloo) */}
         <div className="md:hidden">
-          <img src={lawyers[0].photo} alt={lawyers[0].name} className="w-full h-[360px] object-cover grayscale" />
+          <img src={lawyers[0].photo} alt={lawyers[0].name} className="w-full h-[360px] object-cover rounded-sm" />
           <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
-          <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px" }}>
+          <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px", fontWeight: 600 }}>
             {lawyers[0].name}
           </h3>
           <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 18 }}>

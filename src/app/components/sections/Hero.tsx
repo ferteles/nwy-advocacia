@@ -19,14 +19,13 @@ export function Hero() {
       <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden z-10">
         <WatermarkHero />
         <div className="relative max-w-[1440px] mx-auto px-6 md:px-[120px] w-full pt-[120px] md:pt-[160px]">
-          <div className="max-w-[400px] md:max-w-[750px] ml-auto">
-            <h1 className="font-['Cormorant_Garamond',serif] text-[#1A1A1A]" style={{ fontSize: "clamp(32px, 4.5vw, 52px)", lineHeight: 1.1, fontWeight: 400 }}>
-              Condução jurídica de casos que exigem estruturação estratégica e responsabilidade na tomada de decisões.
+          <div className="max-w-[400px] md:max-w-[820px] ml-auto">
+            <h1 className="font-['Cormorant_Garamond',serif] text-[#1A1A1A]" style={{ fontSize: "clamp(36px, 4.8vw, 64px)", lineHeight: 1.2, fontWeight: 400 }}>
+              Atuação jurídica estratégica<br />
+              com método, clareza e condução<br />
+              responsável.
             </h1>
-            <p className="mt-6 md:mt-8 font-['Inter',sans-serif] text-[#1A1A1A]/80" style={{ fontSize: "clamp(16px, 1.8vw, 22px)", lineHeight: 1.6 }}>
-              Prática construída a partir de experiência sólida em contextos que exigem responsabilidade, planejamento e tomada de decisões conscientes.
-            </p>
-            <a href="#contato" className="inline-block mt-8 md:mt-10 font-['Inter',sans-serif] text-[#1A1A1A] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(18px, 1.8vw, 24px)" }}>
+            <a href="#contato" className="inline-block mt-10 md:mt-12 font-['Inter',sans-serif] text-[#1A1A1A] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(18px, 1.6vw, 22px)", fontWeight: 500 }}>
               Entrar em Contato
             </a>
           </div>
