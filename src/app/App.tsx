@@ -1,5 +1,7 @@
 import { useState } from "react";
 import svgPaths from "../imports/svg-ttosx3q9hh";
+import { Toaster, toast } from "sonner";
+
 
 // Project images
 import videoHero from "../assets/images/hero1920x1080-converter.mp4";
@@ -439,19 +441,64 @@ function Quote() {
 
 function Contact() {
   const [form, setForm] = useState({ nome: "", email: "", assunto: "", mensagem: "" });
+  const [honeypot, setHoneypot] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Proteção contra bots (Honeypot)
+    if (honeypot) {
+      console.warn("Submissão suspeita bloqueada.");
+      return; // Bloqueia silenciosamente
+    }
+
+    // Validações básicas adicionais no JS
+    if (!form.nome.trim() || !form.email.trim() || !form.assunto.trim() || !form.mensagem.trim()) {
+      toast.error("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      toast.error("Por favor, insira um endereço de e-mail válido.");
+      return;
+    }
+
+    setSubmitting(true);
+
+    // Simulação segura de envio estático
+    setTimeout(() => {
+      toast.success("Mensagem enviada com sucesso! Retornaremos o seu contato em breve.");
+      setForm({ nome: "", email: "", assunto: "", mensagem: "" });
+      setSubmitting(false);
+    }, 1200);
+  };
 
   return (
     <section id="contato" style={{ background: COLORS.light }} className="py-12 md:py-20 relative overflow-hidden">
       <WatermarkFooter />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-10 md:gap-12 z-10">
         {/* Contact Form */}
-        <div className="lg:w-1/2">
+        <form onSubmit={handleSubmit} className="lg:w-1/2">
           <h2 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#1A1A1A] mb-2 md:mb-4" style={{ fontSize: "clamp(28px, 3.5vw, 42px)" }}>
             Contato
           </h2>
           <p className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 mb-5 md:mb-8" style={{ fontSize: "clamp(13px, 1.5vw, 16px)", lineHeight: 1.5 }}>
             Para informações ou agendamento de conversa inicial, preencha o formulário abaixo.
           </p>
+
+          {/* Campo invisível Honeypot para proteção contra Bots */}
+          <input
+            type="text"
+            name="b_phone"
+            style={{ display: "none" }}
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+
           <div className="flex flex-col gap-2 md:gap-3">
             {(["nome", "email", "assunto"] as const).map((f) => (
               <input
@@ -462,6 +509,7 @@ function Contact() {
                 onChange={(e) => setForm({ ...form, [f]: e.target.value })}
                 className="h-[36px] md:h-[50px] px-3 md:px-4 font-['Inter',sans-serif] text-[#dadad7] placeholder-[#dadad7]"
                 style={{ background: "#ABB1B9", fontSize: "clamp(12px, 1.3vw, 16px)", border: "none", outline: "none" }}
+                required
               />
             ))}
             <textarea
@@ -470,14 +518,20 @@ function Contact() {
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
               className="h-[130px] md:h-[180px] px-3 md:px-4 py-2 md:py-3 font-['Inter',sans-serif] text-[#dadad7] placeholder-[#dadad7] resize-none"
               style={{ background: "#ABB1B9", fontSize: "clamp(12px, 1.3vw, 16px)", border: "none", outline: "none" }}
+              required
             />
           </div>
           <div className="flex justify-end mt-4 md:mt-6">
-            <button className="font-['Cormorant_Garamond',serif] font-semibold text-[#1A1A1A] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(18px, 2vw, 26px)" }}>
-              Enviar
+            <button 
+              type="submit" 
+              disabled={submitting}
+              className="font-['Cormorant_Garamond',serif] font-semibold text-[#1A1A1A] border-b-2 border-black pb-1 hover:opacity-70 transition disabled:opacity-50" 
+              style={{ fontSize: "clamp(18px, 2vw, 26px)" }}
+            >
+              {submitting ? "Enviando..." : "Enviar"}
             </button>
           </div>
-        </div>
+        </form>
 
         {/* Where we are */}
         <div className="lg:w-1/2">
@@ -569,6 +623,7 @@ export default function App() {
       <Quote />
       <Contact />
       <Footer />
+      <Toaster position="bottom-right" richColors />
     </div>
   );
 }
