@@ -638,7 +638,7 @@ export default function IPhone1617Pro() {
       </div>
       <div className="absolute font-['Cormorant_Garamond:SemiBold',sans-serif] font-semibold leading-[0] left-[10.49%] right-[18.27%] text-[#32353a] text-[0px] top-[7239.18px]">
         <p className="leading-[26.517px] mb-0 text-[30.937px]">Paulo Waterloo</p>
-        <p className="leading-[26.517px] text-[19.446px]">OAB 76383- DF</p>
+        <p className="leading-[26.517px] text-[19.446px]">OAB 60977- DF</p>
       </div>
       <div className="absolute font-['Inter:Regular',sans-serif] font-normal h-[295.224px] leading-[0] left-[47.49px] not-italic text-[#32353a] text-[14.142px] top-[7327px] w-[323.509px] whitespace-pre-wrap">
         <p className="leading-[normal] mb-0">Especialista em Direito Militar e Administração Pública, com sólida experiência em demandas administrativas e judiciais envolvendo a União perante o TRF-1 e em procedimentos conduzidos pelo Ministério Público Federal.</p>

@@ -4,7 +4,7 @@ import { COLORS } from "../../constants/colors";
 const lawyers = [
   {
     name: "Paulo Waterloo",
-    oab: "OAB 76383 - DF",
+    oab: "OAB 60977 - DF",
     photo: imgPaulo,
     bio: "Especialista em Direito Militar e Administração Pública, com sólida experiência em demandas administrativas e judiciais envolvendo a União perante o TRF-1 e em procedimentos conduzidos pelo Ministério Público Federal.\n\nAtuação consistente no assessoramento em Inquéritos Policiais Militares, Conselhos de Justificação e de Disciplina, além de procedimentos administrativos no âmbito das Forças Armadas e das forças auxiliares, bem como em ações penais perante a Justiça Militar.\nExperiência na defesa em Comissões Parlamentares de Inquérito.\n\nAtuação em demandas de Direito Administrativo, Penal, Civil e Previdenciário.",
   },

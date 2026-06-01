@@ -617,15 +617,15 @@ export default function Desktop() {
       </div>
       <div className="absolute font-['Cormorant_Garamond:SemiBold',sans-serif] font-semibold leading-[0] left-[9.38%] right-[68.13%] text-[#32353a] text-[0px] top-[4945px]">
         <p className="leading-[30px] mb-0 text-[35px]">Gabriela Nepomuceno</p>
-        <p className="leading-[30px] text-[22px]">OAB 76383- DF</p>
+        <p className="leading-[30px] text-[22px]">OAB 60977- DF</p>
       </div>
       <div className="absolute font-['Cormorant_Garamond:SemiBold',sans-serif] font-semibold leading-[0] left-[37.57%] right-[39.93%] text-[#32353a] text-[0px] top-[4945px]">
         <p className="leading-[30px] mb-0 text-[35px]">Paulo Waterloo</p>
-        <p className="leading-[30px] text-[22px]">OAB 76383- DF</p>
+        <p className="leading-[30px] text-[22px]">OAB 60977- DF</p>
       </div>
       <div className="absolute font-['Cormorant_Garamond:SemiBold',sans-serif] font-semibold leading-[0] left-[64.79%] right-[12.71%] text-[#32353a] text-[0px] top-[4945px]">
         <p className="leading-[30px] mb-0 text-[35px]">Atalita Yamamoto</p>
-        <p className="leading-[30px] text-[22px]">OAB 76383- DF</p>
+        <p className="leading-[30px] text-[22px]">OAB 60977- DF</p>
       </div>
       <p className="absolute font-['Inter:Regular',sans-serif] font-normal h-[334px] leading-[normal] left-[calc(66.67%-8px)] not-italic text-[#32353a] text-[16px] top-[5060px] w-[340px]">Lorem ipsum dolor sit amet consectetur. Velit penatibus lectus nec turpis. Mattis semper lorem sociis nec eget arcu sed lectus aliquam. Arcu commodo sit aliquet sit maecenas. Quis dui placerat tortor gravida. Aliquam elementum in eu aenean. Sit pulvinar placerat sit egestas diam sit habitasse donec massa. Ultrices ultrices amet arcu ac pellentesque imperdiet. Amet ullamcorper dictumst tristique pretium proin feugiat. Sem integer tristique purus morbi tellus. Sit congue accumsan at libero libero. Id eu consectetur pellentesque.</p>
       <div className="absolute font-['Inter:Regular',sans-serif] font-normal h-[334px] leading-[0] left-[calc(33.33%+67px)] not-italic text-[#32353a] text-[16px] top-[5060px] w-[366px] whitespace-pre-wrap">
