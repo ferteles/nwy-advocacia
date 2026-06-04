@@ -43,16 +43,16 @@ export function About() {
             </div>
             {/* Texto: inicia em y=120+180=300 → perfeitamente centralizado na banda escura */}
             <div className="flex-1 relative" style={{ zIndex: 1, paddingTop: 180, paddingLeft: 64 }}>
-              <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+              <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: "clamp(30px, 2.1vw, 36px)", lineHeight: 1.5 }}>
                 Nascemos de uma atuação sólida e da experiência em contextos que exigem responsabilidade, planejamento e tomada de decisão consciente.
               </p>
-              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(30px, 2.1vw, 36px)", lineHeight: 1.5 }}>
                 Estruturamos nossa prática para atuar de forma independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
               </p>
-              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(30px, 2.1vw, 36px)", lineHeight: 1.5 }}>
                 Não atuamos por impulso nem reagimos a problemas já instalados.
               </p>
-              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
+              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(30px, 2.1vw, 36px)", lineHeight: 1.5 }}>
                 Analisamos cenários, definimos estratégias e conduzimos cada demanda com clareza e controle.
               </p>
             </div>

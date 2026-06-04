@@ -13,8 +13,8 @@ export function Quote() {
       <div
         className="relative mx-auto"
         style={{
-          marginLeft: "clamp(52px, 7vw, 130px)",
-          marginRight: "clamp(52px, 7vw, 130px)",
+          marginLeft: "clamp(86px, 10.5vw, 202px)",
+          marginRight: "clamp(86px, 10.5vw, 202px)",
           marginTop: 72,
           marginBottom: 72,
           zIndex: 3,
@@ -28,15 +28,15 @@ export function Quote() {
             style={{ opacity: 0.35, zIndex: 0 }}
           />
           <div className="relative px-10 md:px-16 py-14 md:py-20 text-center" style={{ zIndex: 4 }}>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9]" style={{ fontSize: "clamp(15px, 1.6vw, 20px)", lineHeight: 1.7 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9]" style={{ fontSize: "clamp(30px, 2.4vw, 38px)", lineHeight: 1.7 }}>
               Comunicamos pouco, mas dizemos muito.<br />
               Não gritamos autoridade. Sustentamos.
             </p>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-6 md:mt-8" style={{ fontSize: "clamp(15px, 1.6vw, 20px)", lineHeight: 1.7 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-6 md:mt-8" style={{ fontSize: "clamp(30px, 2.4vw, 38px)", lineHeight: 1.7 }}>
               Atuamos com postura segura, estratégica, discreta e precisa.<br />
               Não utilizamos o medo como argumento nem a urgência como ferramenta.
             </p>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-6 md:mt-8" style={{ fontSize: "clamp(15px, 1.6vw, 20px)", lineHeight: 1.7 }}>
+            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-6 md:mt-8" style={{ fontSize: "clamp(30px, 2.4vw, 38px)", lineHeight: 1.7 }}>
               Preferimos clareza, precisão e direção.
             </p>
           </div>

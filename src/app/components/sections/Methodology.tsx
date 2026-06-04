@@ -17,7 +17,7 @@ export function Methodology() {
       />
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col lg:flex-row gap-8 md:gap-12" style={{ zIndex: 1 }}>
         <div className="lg:w-1/2">
-          <h2 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
+          <h2 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(46px, 5.25vw, 68px)", lineHeight: 1.2 }}>
             Nossa atuação jurídica é estruturada a partir de três eixos fundamentais:
           </h2>
           <div className="h-[3px] w-full max-w-[312px] md:max-w-[430px] mt-4 md:mt-6" style={{ background: COLORS.gold }} />
@@ -31,10 +31,10 @@ export function Methodology() {
           {steps.map((step) => (
             <div key={step.title} className="relative z-10 p-6 md:p-8" style={{ background: COLORS.accent }}>
               <div className="h-[3px] w-full mb-4 md:mb-5" style={{ background: COLORS.gold }} />
-              <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(28px, 3vw, 35px)" }}>
+              <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9]" style={{ fontSize: "clamp(50px, 4.5vw, 60px)" }}>
                 {step.title}
               </h3>
-              <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3" style={{ fontSize: "clamp(14px, 1.5vw, 18px)", lineHeight: 1.6 }}>
+              <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3" style={{ fontSize: "clamp(28px, 2.25vw, 34px)", lineHeight: 1.6 }}>
                 {step.desc}
               </p>
             </div>

@@ -14,7 +14,7 @@ export function Lawyers() {
   return (
     <section id="advogados" style={{ background: "white" }} className="py-12 md:py-20">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-12" style={{ fontSize: "clamp(34px, 4vw, 40px)", lineHeight: 1.15 }}>
+        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-12" style={{ fontSize: "clamp(58px, 6.0vw, 68px)", lineHeight: 1.15 }}>
           Advogados
         </h2>
 

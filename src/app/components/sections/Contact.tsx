@@ -45,10 +45,10 @@ export function Contact() {
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-10 md:gap-12 z-10">
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="lg:w-1/2">
-          <h2 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#1A1A1A] mb-2 md:mb-4" style={{ fontSize: "clamp(28px, 3.5vw, 42px)" }}>
+          <h2 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#1A1A1A] mb-2 md:mb-4" style={{ fontSize: "clamp(50px, 5.25vw, 70px)" }}>
             Contato
           </h2>
-          <p className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 mb-5 md:mb-8" style={{ fontSize: "clamp(13px, 1.5vw, 16px)", lineHeight: 1.5 }}>
+          <p className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 mb-5 md:mb-8" style={{ fontSize: "clamp(27px, 2.25vw, 32px)", lineHeight: 1.5 }}>
             Para informações ou agendamento de conversa inicial, entre em contacto.
           </p>
 
@@ -72,7 +72,7 @@ export function Contact() {
                 value={form[f]}
                 onChange={(e) => setForm({ ...form, [f]: e.target.value })}
                 className="h-[36px] md:h-[50px] px-3 md:px-4 font-['Inter',sans-serif] text-[#dadad7] placeholder-[#dadad7]"
-                style={{ background: "#ABB1B9", fontSize: "clamp(12px, 1.3vw, 16px)", border: "none", outline: "none" }}
+                style={{ background: "#ABB1B9", fontSize: "clamp(26px, 1.95vw, 32px)", border: "none", outline: "none" }}
                 required
               />
             ))}
@@ -81,7 +81,7 @@ export function Contact() {
               value={form.mensagem}
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
               className="h-[130px] md:h-[180px] px-3 md:px-4 py-2 md:py-3 font-['Inter',sans-serif] text-[#dadad7] placeholder-[#dadad7] resize-none"
-              style={{ background: "#ABB1B9", fontSize: "clamp(12px, 1.3vw, 16px)", border: "none", outline: "none" }}
+              style={{ background: "#ABB1B9", fontSize: "clamp(26px, 1.95vw, 32px)", border: "none", outline: "none" }}
               required
             />
           </div>
@@ -90,7 +90,7 @@ export function Contact() {
               type="submit" 
               disabled={submitting}
               className="font-['Cormorant_Garamond',serif] font-semibold text-[#1A1A1A] border-b-2 border-black pb-1 hover:opacity-70 transition disabled:opacity-50" 
-              style={{ fontSize: "clamp(18px, 2vw, 26px)" }}
+              style={{ fontSize: "clamp(34px, 3.0vw, 46px)" }}
             >
               {submitting ? "Enviando..." : "Enviar"}
             </button>
@@ -104,13 +104,18 @@ export function Contact() {
             <div className="w-full lg:pl-8">
               {/* Mobile: separator line */}
               <div className="lg:hidden h-[2px] w-full mb-6" style={{ background: COLORS.darkAlt }} />
-              <h2 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#1A1A1A] mb-3 md:mb-4" style={{ fontSize: "clamp(28px, 3.5vw, 42px)" }}>
+              <h2 className="font-['Cormorant_Garamond',serif] font-semibold tracking-[-0.02em] text-[#1A1A1A] mb-3 md:mb-4" style={{ fontSize: "clamp(50px, 5.25vw, 70px)" }}>
                 Onde Estamos
               </h2>
-              <div className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 space-y-1" style={{ fontSize: "clamp(13px, 1.5vw, 16px)" }}>
+              <div className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 space-y-1 max-md:!text-[24px]" style={{ fontSize: "clamp(27px, 2.25vw, 32px)" }}>
                 <p>Shopping Conjunto Nacional, Torre Vermelha, sala 5026</p>
                 <p>Brasília - DF</p>
-                <p className="mt-2 text-[#949060]">61 9 9882 7844</p>
+                <p className="mt-2 text-[#949060]">
+                  <a href="tel:+556****7844" className="hover:underline">61 9 9882 7844</a>
+                </p>
+                <p className="text-[#949060]">
+                  <a href="mailto:contato@nwyadvocacia.com.br" className="hover:underline">contato@nwyadvocacia.com.br</a>
+                </p>
               </div>
               <div className="relative mt-5 md:mt-6 w-full h-[250px] md:h-[350px] overflow-hidden border border-[#32353A]/10 rounded-sm">
                 <iframe
