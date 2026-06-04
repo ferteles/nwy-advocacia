@@ -1,5 +1,3 @@
-import { COLORS } from "../../constants/colors";
-
 const practiceAreas = [
   { title: "Direito\nMilitar", desc: "Atuação em demandas administrativas, disciplinares e judiciais relacionadas às Forças Armadas e demais instituições militares." },
   { title: "Direito\nPrevidenciário", desc: "Atuação em questões previdenciárias, benefícios, aposentadorias e demandas correlatas, nas esferas administrativa e judicial." },
@@ -13,24 +11,23 @@ const practiceAreas = [
 
 export function PracticeAreas() {
   return (
-    <section id="atuacao" style={{ background: COLORS.light }} className="pb-10 md:pb-20">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] pt-10 md:pt-14 pb-8 md:pb-12">
-        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e]" style={{ fontSize: "clamp(46px, 5.25vw, 68px)", lineHeight: 1.2 }}>
+    <section id="atuacao" className="bg-site-light pb-10 md:pb-20">
+      <div className="max-w-[2286px] mx-auto px-6 md:px-[120px] pt-10 md:pt-14 pb-8 md:pb-12">
+        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] text-section-title">
           Atuamos em diferentes áreas do Direito, com foco em demandas que exigem leitura de cenário, responsabilidade decisória e condução técnica consistente.
         </h2>
       </div>
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8">
+      <div className="max-w-[2286px] mx-auto px-6 md:px-[120px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8">
         {practiceAreas.map((area, i) => (
           <div
             key={area.title}
-            className={`p-6 md:p-8 flex flex-col md:col-span-1 ${i < 6 ? "lg:col-span-4" : "lg:col-span-6"}`}
-            style={{ background: COLORS.cardBg }}
+            className={`p-6 md:p-8 flex flex-col md:col-span-1 ${i < 6 ? "lg:col-span-4" : "lg:col-span-6"} bg-site-card-bg`}
           >
-            <div className="h-[3px] md:h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.gold }} />
-            <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] whitespace-pre-line" style={{ fontSize: "clamp(46px, 3.75vw, 56px)", lineHeight: "30px" }}>
+            <div className="gold-bar" />
+            <h3 className="font-['Cormorant_Garamond',serif] pa-card-title">
               {area.title}
             </h3>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3 md:mt-4" style={{ fontSize: "clamp(27px, 1.95vw, 32px)", lineHeight: 1.6 }}>
+            <p className="font-['Inter',sans-serif] pa-card-desc mt-3 md:mt-4">
               {area.desc}
             </p>
           </div>

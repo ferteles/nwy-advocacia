@@ -12,15 +12,14 @@ export function Navbar() {
 
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] flex items-center justify-between h-[100px] md:h-[160px]">
+      <div className="max-w-[2286px] mx-auto px-6 md:px-[120px] flex items-center justify-between h-[100px] md:h-[160px]">
         <Logo className="w-[100px] md:w-[140px] h-auto" color="#1A1A1A" />
         <div className="hidden md:flex gap-10">
           {links.map((l, i) => (
             <a
               key={l.href}
               href={l.href}
-              className={`font-['Inter',sans-serif] text-[#1A1A1A] hover:opacity-70 transition-opacity ${i === 0 ? "border-b border-black pb-1" : ""}`}
-              style={{ fontSize: 18, fontWeight: 400 }}
+              className={`font-['Inter',sans-serif] text-[#1A1A1A] hover:opacity-70 transition-opacity text-nav ${i === 0 ? "border-b border-black pb-1" : ""}`}
             >
               {l.label}
             </a>

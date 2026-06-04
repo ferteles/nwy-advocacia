@@ -1,5 +1,4 @@
 import imgPaulo from "../../../assets/images/paulo-waterloo.png";
-import { COLORS } from "../../constants/colors";
 
 const lawyers = [
   {
@@ -12,9 +11,9 @@ const lawyers = [
 
 export function Lawyers() {
   return (
-    <section id="advogados" style={{ background: "white" }} className="py-12 md:py-20">
+    <section id="advogados" className="bg-white section-pad">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-12" style={{ fontSize: "clamp(58px, 6.0vw, 68px)", lineHeight: 1.15 }}>
+        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] lawyer-section-title">
           Advogados
         </h2>
 
@@ -24,14 +23,14 @@ export function Lawyers() {
             {lawyers.map((l) => (
               <div key={l.name}>
                 <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover rounded-sm" />
-                <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
-                <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px", fontWeight: 600 }}>
+                <div className="gold-bar mt-4" />
+                <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] lawyer-name">
                   {l.name}
                 </h3>
-                <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
+                <p className="font-['Inter',sans-serif] text-[#32353A] lawyer-oab mt-1">
                   {l.oab}
                 </p>
-                <p className="font-['Inter',sans-serif] text-[#1A1A1A]/80 mt-6 whitespace-pre-line" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="font-['Inter',sans-serif] text-[#1A1A1A]/80 lawyer-bio mt-6">
                   {l.bio}
                 </p>
               </div>
@@ -42,14 +41,14 @@ export function Lawyers() {
         {/* Mobile: featured lawyer (Paulo Waterloo) */}
         <div className="md:hidden">
           <img src={lawyers[0].photo} alt={lawyers[0].name} className="w-full h-[360px] object-cover rounded-sm" />
-          <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
-          <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px", fontWeight: 600 }}>
+          <div className="gold-bar mt-4" />
+          <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] lawyer-name">
             {lawyers[0].name}
           </h3>
-          <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 18 }}>
+          <p className="font-['Inter',sans-serif] text-[#32353A] lawyer-oab mt-1">
             {lawyers[0].oab}
           </p>
-          <p className="font-['Inter',sans-serif] text-[#32353A] mt-4 whitespace-pre-line" style={{ fontSize: 13, lineHeight: 1.6 }}>
+          <p className="font-['Inter',sans-serif] text-[#32353A] lawyer-bio mt-4">
             {lawyers[0].bio}
           </p>
         </div>
