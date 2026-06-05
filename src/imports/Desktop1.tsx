@@ -737,11 +737,11 @@ export default function Desktop() {
       </div>
       <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(50%+12px)] not-italic text-[17.732px] text-white top-[7367px] whitespace-nowrap">O Escritório</p>
       <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(66.67%-10px)] not-italic text-[17.732px] text-white top-[7367px] w-[409px]">Shopping Conjunto Nacional, Torre Vermelha, sala 5026 - Brasília - DF</p>
-      <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(50%+10px)] not-italic text-[17.732px] text-white top-[7491px] whitespace-nowrap">Advogados</p>
-      <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(66.67%-12px)] not-italic text-[17.732px] text-white top-[7491px] whitespace-nowrap">contato@nwyadvocacia.com.br</p>
+      <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(50%+12px)] not-italic text-[17.732px] text-white top-[7491px] whitespace-nowrap">Advogados</p>
+      <a href="mailto:contato@nwyadvocacia.com.br" className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(66.67%-12px)] not-italic text-[17.732px] text-white top-[7491px] whitespace-nowrap hover:opacity-80 transition-opacity duration-300">contato@nwyadvocacia.com.br</a>
       <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(50%+12px)] not-italic text-[17.732px] text-white top-[7553px] whitespace-nowrap">Contato</p>
       <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(50%+12px)] not-italic text-[17.732px] text-white top-[7429px] whitespace-nowrap">Nossa Atuação</p>
-      <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(66.67%-10px)] not-italic text-[17.732px] text-white top-[7429px] whitespace-nowrap">61 9 9882 7844</p>
+      <a href="tel:5561998827844" className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[calc(66.67%-10px)] not-italic text-[17.732px] text-white top-[7429px] whitespace-nowrap hover:opacity-80 transition-opacity duration-300">61 9 9882 7844</a>
       <Group8 />
       <Group9 />
       <Camada1 />

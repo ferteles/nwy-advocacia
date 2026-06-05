@@ -32,8 +32,16 @@ export function Footer() {
             <p className="font-['Inter',sans-serif] font-medium text-white/80" style={{ fontSize: "clamp(11px, 1.5vw, 15px)", lineHeight: 1.6 }}>
               Shopping Conjunto Nacional,<br />Torre Vermelha, sala 5026<br />Brasília - DF
             </p>
-            <p className="font-['Inter',sans-serif] font-medium text-white mt-4" style={{ fontSize: "clamp(11px, 1.5vw, 15px)" }}>61 9 9882 7844</p>
-            <p className="font-['Inter',sans-serif] font-medium text-white/80 mt-1" style={{ fontSize: "clamp(11px, 1.5vw, 15px)" }}>contato@nwyadvocacia.com.br</p>
+            <p className="font-['Inter',sans-serif] font-medium mt-4" style={{ fontSize: "clamp(11px, 1.5vw, 15px)" }}>
+              <a href="tel:5561998827844" className="text-white hover:text-[#5D7B93] transition-colors duration-300">
+                61 9 9882 7844
+              </a>
+            </p>
+            <p className="font-['Inter',sans-serif] font-medium mt-1" style={{ fontSize: "clamp(11px, 1.5vw, 15px)" }}>
+              <a href="mailto:contato@nwyadvocacia.com.br" className="text-white/80 hover:text-[#5D7B93] transition-colors duration-300">
+                contato@nwyadvocacia.com.br
+              </a>
+            </p>
           </div>
         </div>
       </div>

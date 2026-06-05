@@ -110,7 +110,11 @@ export function Contact() {
               <div className="font-['Inter',sans-serif] font-medium text-[#1A1A1A]/80 space-y-1" style={{ fontSize: "clamp(13px, 1.5vw, 16px)" }}>
                 <p>Shopping Conjunto Nacional, Torre Vermelha, sala 5026</p>
                 <p>Brasília - DF</p>
-                <p className="mt-2 text-[#949060]">61 9 9882 7844</p>
+                <p className="mt-2">
+                  <a href="tel:5561998827844" className="text-[#949060] hover:opacity-80 transition-opacity duration-300 font-semibold">
+                    61 9 9882 7844
+                  </a>
+                </p>
               </div>
               <div className="relative mt-5 md:mt-6 w-full h-[250px] md:h-[350px] overflow-hidden border border-[#32353A]/10 rounded-sm">
                 <iframe

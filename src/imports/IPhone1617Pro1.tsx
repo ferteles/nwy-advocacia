@@ -595,8 +595,8 @@ export default function IPhone1617Pro() {
         <p className="leading-[normal] mb-0">{`Torre Vermelha, sala 5026 `}</p>
         <p className="leading-[normal]">Brasília - DF</p>
       </div>
-      <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[38px] not-italic text-[17.732px] text-white top-[10162px] whitespace-nowrap">contato@nwyadvocacia.com.br</p>
-      <p className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[17.732px] text-white top-[10126px] whitespace-nowrap">61 9 9882 7844</p>
+      <a href="mailto:contato@nwyadvocacia.com.br" className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[38px] not-italic text-[17.732px] text-white top-[10162px] whitespace-nowrap hover:opacity-80 transition-opacity duration-300">contato@nwyadvocacia.com.br</a>
+      <a href="tel:5561998827844" className="absolute font-['Inter-Regular:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[17.732px] text-white top-[10126px] whitespace-nowrap hover:opacity-80 transition-opacity duration-300">61 9 9882 7844</a>
       <div className="absolute flex h-0 items-center justify-center left-[-590px] top-[9627px] w-[1451px]">
         <div className="flex-none rotate-180">
           <div className="h-0 relative w-[1451px]">
