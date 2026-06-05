@@ -41,20 +41,22 @@ export function About() {
               <div className="absolute left-0 top-0 bottom-0 w-[40px]" style={{ background: COLORS.gold, zIndex: 2 }} />
               <img src={imgOffice} alt="Escritório" className="w-full object-cover relative" style={{ height: 640 }} />
             </div>
-            {/* Texto: inicia em y=120+180=300 → perfeitamente centralizado na banda escura */}
-            <div className="flex-1 relative" style={{ zIndex: 1, paddingTop: 180, paddingLeft: 64 }}>
-              <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
-                Nascemos de uma atuação sólida e da experiência em contextos que exigem responsabilidade, planejamento e tomada de decisão consciente.
-              </p>
-              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
-                Estruturamos nossa prática para atuar de forma independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
-              </p>
-              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
-                Não atuamos por impulso nem reagimos a problemas já instalados.
-              </p>
-              <p className="font-['Inter',sans-serif] text-[#dadad7] mt-4" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5 }}>
-                Analisamos cenários, definimos estratégias e conduzimos cada demanda com clareza e controle.
-              </p>
+            {/* Texto: perfeitamente centralizado verticalmente na banda escura */}
+            <div className="flex-1 relative self-stretch" style={{ zIndex: 1 }}>
+              <div className="absolute inset-y-0 left-0 right-0 flex flex-col justify-center pl-16 pr-8" style={{ top: 130, height: 460 }}>
+                <p className="font-['Inter',sans-serif] text-[#dadad7]" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.6 }}>
+                  Nascemos de uma atuação sólida e da experiência em contextos que exigem responsabilidade, planejamento e tomada de decisão consciente.
+                </p>
+                <p className="font-['Inter',sans-serif] text-[#dadad7] mt-5" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.6 }}>
+                  Estruturamos nossa prática para atuar de forma independente, técnica e estratégica, respeitando regras, procedimentos e o impacto real das decisões jurídicas.
+                </p>
+                <p className="font-['Inter',sans-serif] text-[#dadad7] mt-5" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.6 }}>
+                  Não atuamos por impulso nem reagimos a problemas já instalados.
+                </p>
+                <p className="font-['Inter',sans-serif] text-[#dadad7] mt-5" style={{ fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.6 }}>
+                  Analisamos cenários, definimos estratégias e conduzimos cada demanda com clareza e controle.
+                </p>
+              </div>
             </div>
           </div>
         </div>

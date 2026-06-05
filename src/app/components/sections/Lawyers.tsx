@@ -11,47 +11,80 @@ const lawyers = [
 ];
 
 export function Lawyers() {
+  const l = lawyers[0];
+
   return (
-    <section id="advogados" style={{ background: "white" }} className="py-12 md:py-20">
+    <section id="advogados" style={{ background: "white" }} className="py-16 md:py-24 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-12" style={{ fontSize: "clamp(34px, 4vw, 40px)", lineHeight: 1.15 }}>
+        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-16" style={{ fontSize: "clamp(36px, 4vw, 48px)", lineHeight: 1.15 }}>
           Advogados
         </h2>
 
-        {/* Desktop: center the lawyer card */}
-        <div className="hidden md:flex justify-center">
-          <div className="max-w-[400px]">
-            {lawyers.map((l) => (
-              <div key={l.name}>
-                <img src={l.photo} alt={l.name} className="w-full h-[400px] object-cover rounded-sm" />
-                <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
-                <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 32, lineHeight: "30px", fontWeight: 600 }}>
-                  {l.name}
-                </h3>
-                <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 20 }}>
-                  {l.oab}
+        {/* Desktop Layout: elegante grid de duas colunas */}
+        <div className="hidden md:grid grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Coluna da Imagem */}
+          <div className="col-span-5 flex flex-col">
+            <div className="overflow-hidden rounded-sm shadow-md bg-gray-100">
+              <img 
+                src={l.photo} 
+                alt={l.name} 
+                className="w-full h-[550px] object-cover object-top transition-transform duration-700 hover:scale-105" 
+              />
+            </div>
+            {/* Barra Dourada abaixo da foto */}
+            <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
+          </div>
+
+          {/* Coluna de Texto/Biografia */}
+          <div className="col-span-7 flex flex-col justify-center">
+            <h3 className="font-['Cormorant_Garamond',serif] text-[#262626] font-semibold tracking-wide" style={{ fontSize: "clamp(38px, 3.5vw, 44px)", lineHeight: 1.15 }}>
+              {l.name}
+            </h3>
+            <p className="font-['Inter',sans-serif] font-medium tracking-wide mt-2" style={{ color: COLORS.gold, fontSize: 18 }}>
+              {l.oab}
+            </p>
+            
+            {/* Divisor elegante horizontal */}
+            <div className="w-16 h-[2px] my-6" style={{ background: COLORS.gold }} />
+
+            <div className="font-['Inter',sans-serif] text-[#262626]/90 space-y-4 text-justify" style={{ fontSize: 16, lineHeight: 1.85 }}>
+              {l.bio.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="whitespace-pre-line">
+                  {paragraph}
                 </p>
-                <p className="font-['Inter',sans-serif] text-[#1A1A1A]/80 mt-6 whitespace-pre-line" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  {l.bio}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Mobile: featured lawyer (Paulo Waterloo) */}
-        <div className="md:hidden">
-          <img src={lawyers[0].photo} alt={lawyers[0].name} className="w-full h-[360px] object-cover rounded-sm" />
-          <div className="h-[3px] w-full mt-4" style={{ background: COLORS.gold }} />
-          <h3 className="font-['Cormorant_Garamond',serif] text-[#32353A] mt-3" style={{ fontSize: 28, lineHeight: "26px", fontWeight: 600 }}>
-            {lawyers[0].name}
-          </h3>
-          <p className="font-['Inter',sans-serif] text-[#32353A] mt-1" style={{ fontSize: 18 }}>
-            {lawyers[0].oab}
-          </p>
-          <p className="font-['Inter',sans-serif] text-[#32353A] mt-4 whitespace-pre-line" style={{ fontSize: 13, lineHeight: 1.6 }}>
-            {lawyers[0].bio}
-          </p>
+        {/* Mobile Layout: empilhado de forma elegante */}
+        <div className="md:hidden flex flex-col gap-6">
+          <div>
+            <img 
+              src={l.photo} 
+              alt={l.name} 
+              className="w-full h-[380px] object-cover object-top rounded-sm shadow-sm" 
+            />
+            <div className="h-[3px] w-full mt-3" style={{ background: COLORS.gold }} />
+          </div>
+          <div>
+            <h3 className="font-['Cormorant_Garamond',serif] text-[#262626] font-semibold" style={{ fontSize: 30, lineHeight: 1.2 }}>
+              {l.name}
+            </h3>
+            <p className="font-['Inter',sans-serif] font-medium mt-1" style={{ color: COLORS.gold, fontSize: 16 }}>
+              {l.oab}
+            </p>
+            
+            <div className="w-12 h-[2px] my-4" style={{ background: COLORS.gold }} />
+
+            <div className="font-['Inter',sans-serif] text-[#262626]/90 space-y-3 text-justify" style={{ fontSize: 14, lineHeight: 1.75 }}>
+              {l.bio.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="whitespace-pre-line">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
