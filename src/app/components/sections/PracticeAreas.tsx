@@ -1,41 +1,96 @@
+import imgAreas from "../../../assets/images/areas-office.jpg";
 import { COLORS } from "../../constants/colors";
 
-const practiceAreas = [
-  { title: "Direito\nMilitar", desc: "Atuação em demandas administrativas, disciplinares e judiciais relacionadas às Forças Armadas e demais instituições militares." },
-  { title: "Direito\nPrevidenciário", desc: "Atuação em questões previdenciárias, benefícios, aposentadorias e demandas correlatas, nas esferas administrativa e judicial." },
-  { title: "Direito\nAdministrativo", desc: "Atuação em demandas envolvendo a Administração Pública, atos administrativos, processos administrativos e relações jurídicas com o poder público." },
-  { title: "Direito Civil", desc: "Atuação em demandas cíveis estratégicas, incluindo responsabilidade civil, obrigações, contratos, relações de consumo e litígios patrimoniais." },
-  { title: "Direito Penal", desc: "Atuação em demandas criminais, tanto na fase investigativa quanto processual, incluindo acompanhamento de inquéritos, ações penais e medidas cautelares." },
-  { title: "Proteção aos Direitos\nda Mulher", desc: "Atuação jurídica na proteção dos direitos da mulher, com abordagem técnica e humanizada, orientada pela perspectiva de gênero, abrangendo medidas protetivas de urgência, demandas de violência doméstica e familiar, acompanhamento criminal, ações cíveis e de família." },
-  { title: "Consultivo Jurídico", desc: "Atuação preventiva e estratégica, com análise de riscos, orientação jurídica e suporte à tomada de decisões." },
-  { title: "Demandas Complexas", desc: "Atuação em casos que exigem condução jurídica estruturada e responsabilidade na tomada de decisões." },
+const areas = [
+  "Direito Militar",
+  "Direito Previdenciário",
+  "Direito Administrativo",
+  "Direito Civil",
+  "Direito Penal",
+  "Proteção aos Direitos da Mulher",
+  "Consultivo Jurídico",
 ];
+
+const BAR = "#3d4756";
 
 export function PracticeAreas() {
   return (
-    <section id="atuacao" style={{ background: COLORS.light }} className="pb-10 md:pb-20">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] pt-10 md:pt-14 pb-8 md:pb-12">
-        <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e]" style={{ fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.2 }}>
-          Atuamos em diferentes áreas do Direito, com foco em demandas que exigem leitura de cenário, responsabilidade decisória e condução técnica consistente.
-        </h2>
-      </div>
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[120px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8">
-        {practiceAreas.map((area, i) => (
-          <div
-            key={area.title}
-            className={`p-6 md:p-8 flex flex-col md:col-span-1 ${i < 6 ? "lg:col-span-4" : "lg:col-span-6"}`}
-            style={{ background: COLORS.cardBg }}
-          >
-            <div className="h-[3px] md:h-[4px] w-full mb-3 md:mb-4" style={{ background: COLORS.gold }} />
-            <h3 className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] whitespace-pre-line" style={{ fontSize: "clamp(26px, 2.5vw, 32px)", lineHeight: "30px" }}>
-              {area.title}
-            </h3>
-            <p className="font-['Inter',sans-serif] text-[#d9d9d9] mt-3 md:mt-4" style={{ fontSize: "clamp(13px, 1.3vw, 16px)", lineHeight: 1.6 }}>
-              {area.desc}
-            </p>
+    <section id="atuacao" className="relative overflow-hidden bg-white">
+
+      {/* Desktop */}
+      <div className="hidden lg:block relative bg-white">
+        {/* Imagem da sala à direita (full-bleed) */}
+        <div className="absolute top-0 bottom-0 right-0" style={{ left: "45%" }}>
+          <img src={imgAreas} alt="" className="w-full h-full object-cover" style={{ opacity: 0.4 }} />
+        </div>
+
+        {/* Conteúdo */}
+        <div className="relative max-w-[1440px] mx-auto" style={{ paddingTop: 96, paddingBottom: 96 }}>
+          {/* Título + linha */}
+          <div className="flex items-center gap-6" style={{ paddingLeft: 190, width: "52%" }}>
+            <h2
+              className="font-['Cormorant_Garamond',serif] text-[#444950] whitespace-nowrap"
+              style={{ fontSize: "clamp(40px, 4vw, 58px)", fontWeight: 600, lineHeight: 1.1 }}
+            >
+              Áreas de Atuação
+            </h2>
+            <div style={{ flex: 1, height: 2, background: COLORS.gold }} />
           </div>
-        ))}
+
+          {/* Barras (full-bleed à esquerda) */}
+          <div style={{ marginTop: 48, width: 600 }}>
+            {areas.map((area) => (
+              <div
+                key={area}
+                className="flex items-center justify-end"
+                style={{ background: BAR, height: 82, marginBottom: 13 }}
+              >
+                <span
+                  className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] text-right px-8"
+                  style={{ fontSize: "clamp(24px, 2.4vw, 34px)", fontWeight: 600, lineHeight: 1.2 }}
+                >
+                  {area}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Mobile */}
+      <div className="block lg:hidden bg-white">
+        <div className="relative h-[200px] overflow-hidden">
+          <img src={imgAreas} alt="" className="w-full h-full object-cover" style={{ opacity: 0.4 }} />
+        </div>
+        <div className="px-6 pt-8 pb-10">
+          <div className="flex items-center gap-4">
+            <h2
+              className="font-['Cormorant_Garamond',serif] text-[#444950] whitespace-nowrap"
+              style={{ fontSize: 34, fontWeight: 600, lineHeight: 1.1 }}
+            >
+              Áreas de Atuação
+            </h2>
+            <div style={{ flex: 1, height: 2, background: COLORS.gold }} />
+          </div>
+          <div className="mt-7">
+            {areas.map((area) => (
+              <div
+                key={area}
+                className="flex items-center justify-end"
+                style={{ background: BAR, height: 72, marginBottom: 11 }}
+              >
+                <span
+                  className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] text-right px-5"
+                  style={{ fontSize: 24, fontWeight: 600, lineHeight: 1.2 }}
+                >
+                  {area}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }
