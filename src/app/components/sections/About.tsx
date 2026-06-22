@@ -1,4 +1,4 @@
-import imgOffice from "../../../assets/images/office-interior.png";
+import imgOffice from "../../../assets/images/office-interior-opt.jpg";
 import { COLORS } from "../../constants/colors";
 
 export function About() {

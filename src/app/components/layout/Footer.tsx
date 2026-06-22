@@ -1,4 +1,4 @@
-import imgFooterBg from "../../../assets/images/footer-bg.png";
+import imgFooterBg from "../../../assets/images/footer-bg.jpg";
 import { COLORS } from "../../constants/colors";
 import { Logo } from "./Logo";
 import { WatermarkFooter } from "./Watermarks";
