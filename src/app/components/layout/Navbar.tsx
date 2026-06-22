@@ -5,8 +5,8 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const links = [
     { label: "O Escritório", href: "#escritorio" },
-    { label: "Nossa Atuação", href: "#atuacao" },
-    { label: "Advogados", href: "#advogados" },
+    { label: "Áreas de Atuação", href: "#atuacao" },
+    { label: "Sócio Fundador", href: "#advogados" },
     { label: "Contato", href: "#contato" },
   ];
 

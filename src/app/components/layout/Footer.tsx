@@ -16,10 +16,10 @@ export function Footer() {
         <div className="lg:w-2/3 flex flex-col md:flex-row gap-8 justify-end">
           <div className="flex flex-col gap-2 md:gap-3">
             <h4 className="font-['Cormorant_Garamond',serif] font-semibold text-[#949060] mb-2" style={{ fontSize: 20 }}>Escritório</h4>
-            {["O Escritório", "Nossa Atuação", "Advogados", "Contato"].map((l) => (
+            {["O Escritório", "Áreas de Atuação", "Sócio Fundador", "Contato"].map((l) => (
               <a
                 key={l}
-                href={`#${l === "O Escritório" ? "escritorio" : l === "Nossa Atuação" ? "atuacao" : l.toLowerCase()}`}
+                href={`#${l === "O Escritório" ? "escritorio" : l === "Áreas de Atuação" ? "atuacao" : l === "Sócio Fundador" ? "advogados" : l.toLowerCase()}`}
                 className="font-['Inter',sans-serif] font-medium text-white/80 hover:text-[#5D7B93] transition"
                 style={{ fontSize: "clamp(14px, 1.5vw, 15px)" }}
               >
