@@ -5,5 +5,5 @@ export const COLORS = {
   light: "#DADAD7",
   accent: "#5B728E",
   blue: "#5D7B93",
-  cardBg: "#1E293B",
+  cardBg: "#3D4756",
 };

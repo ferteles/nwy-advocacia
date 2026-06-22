@@ -7,7 +7,7 @@ export function About() {
       {/* Mobile layout */}
       <div className="block lg:hidden" style={{ background: COLORS.light }}>
         <div className="px-4 pt-8 pb-0">
-          <img src={imgOffice} alt="Escritório NWY Advogados" className="w-full h-[300px] object-cover" />
+          <img src={imgOffice} alt="Escritório NWY Advogados" className="w-full h-[412px] object-cover" />
         </div>
       </div>
       <div className="block lg:hidden" style={{ background: COLORS.cardBg }}>
