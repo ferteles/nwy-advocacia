@@ -20,14 +20,12 @@ export function Hero() {
         <WatermarkHero />
         <div className="relative max-w-[1440px] mx-auto px-6 md:px-[120px] w-full pt-[120px] md:pt-[160px]">
           <div className="max-w-[400px] md:max-w-[820px] ml-auto">
-            <h1 className="font-['Cormorant_Garamond',serif] text-[#1A1A1A]" style={{ fontSize: "clamp(36px, 4.8vw, 64px)", lineHeight: 1.2, fontWeight: 400 }}>
-              Atuação jurídica estratégica<br />
-              com método, clareza e condução<br />
-              responsável.
+            <h1 className="font-['Cormorant_Garamond',serif] text-[#1A1A1A]" style={{ fontSize: "clamp(28px, 3.8vw, 52px)", lineHeight: 1.25, fontWeight: 700 }}>
+              Assessoria, consultoria e representação nas esferas administrativa e judicial, com foco na prevenção de conflitos, na defesa de direitos e na construção de soluções jurídicas eficazes.
             </h1>
-            <a href="#contato" className="inline-block mt-10 md:mt-12 font-['Inter',sans-serif] text-[#1A1A1A] border-b-2 border-black pb-1 hover:opacity-70 transition" style={{ fontSize: "clamp(18px, 1.6vw, 22px)", fontWeight: 500 }}>
-              Entrar em Contato
-            </a>
+            <p className="mt-6 font-['Inter',sans-serif] text-[#3d4756]" style={{ fontSize: "clamp(16px, 1.4vw, 20px)", fontWeight: 400 }}>
+              Atuação estratégica, com método, clareza e condução responsável.
+            </p>
           </div>
         </div>
       </section>
