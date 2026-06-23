@@ -21,6 +21,7 @@ export function Logo({ color = "#33363B", className = "" }: LogoProps) {
             <path d={svgPaths.pde9d880} fill={color} />
           </g>
         </g>
+        <path d={svgPaths.p32dc8b00} fill={color} />
         <path d={svgPaths.p1334c400} fill={color} />
         <g>
           <path d={svgPaths.p34c0a400} fill={color} />
