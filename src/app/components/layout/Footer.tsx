@@ -9,8 +9,8 @@ export function Footer() {
 <img src={imgFooterBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10" />
       <div className="absolute inset-0 rotate-180 mix-blend-overlay opacity-10"><WatermarkFooter /></div>
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-6 py-10 md:py-16 flex flex-col lg:flex-row gap-8 md:gap-12 z-10">
-        <div className="lg:w-1/3">
-          <Logo color="#ffffff" className="w-[100px] md:w-[120px] h-auto" />
+        <div className="lg:w-1/3 flex items-center justify-center">
+          <Logo color="#ffffff" className="w-[140px] md:w-[160px] h-auto" />
         </div>
         <div className="lg:w-2/3 flex flex-col md:flex-row gap-8 justify-end">
           <div className="flex flex-col gap-2 md:gap-3">
