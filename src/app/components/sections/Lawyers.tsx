@@ -17,7 +17,7 @@ export function Lawyers() {
     <section id="advogados" style={{ background: "white" }} className="py-16 md:py-24 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <h2 className="font-['Cormorant_Garamond',serif] text-[#1e1e1e] mb-8 md:mb-16" style={{ fontSize: "clamp(36px, 4vw, 48px)", lineHeight: 1.15 }}>
-          Advogados
+          Sócio Fundador
         </h2>
 
         {/* Desktop Layout: elegante grid de duas colunas */}

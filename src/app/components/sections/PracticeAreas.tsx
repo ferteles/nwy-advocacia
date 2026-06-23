@@ -38,16 +38,16 @@ export function PracticeAreas() {
           </div>
 
           {/* Barras (full-bleed à esquerda) */}
-          <div style={{ marginTop: 48, width: 600 }}>
+          <div style={{ marginTop: 48, width: 480 }}>
             {areas.map((area) => (
               <div
                 key={area}
                 className="flex items-center justify-end"
-                style={{ background: BAR, height: 82, marginBottom: 13 }}
+                style={{ background: BAR, height: 60, marginBottom: 10 }}
               >
                 <span
-                  className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] text-right px-8"
-                  style={{ fontSize: "clamp(24px, 2.4vw, 34px)", fontWeight: 600, lineHeight: 1.2 }}
+                  className="font-['Cormorant_Garamond',serif] text-[#d9d9d9] text-right px-6 whitespace-nowrap"
+                  style={{ fontSize: "clamp(14px, 1.5vw, 22px)", fontWeight: 600, lineHeight: 1.2 }}
                 >
                   {area}
                 </span>
@@ -59,10 +59,10 @@ export function PracticeAreas() {
 
       {/* Mobile */}
       <div className="block lg:hidden bg-white">
-        <div className="relative h-[220px] overflow-hidden">
+        <div className="relative h-[422px] overflow-hidden">
           <img src={imgAreas} alt="" className="w-full h-full object-cover" style={{ opacity: 0.85 }} />
         </div>
-        <div className="px-6 pt-8 pb-10">
+        <div className="px-6 pt-28 pb-10">
           <div className="flex items-center gap-3">
             <h2
               className="font-['Cormorant_Garamond',serif] text-[#444950] whitespace-nowrap"
