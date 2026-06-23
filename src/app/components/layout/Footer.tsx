@@ -45,8 +45,7 @@ export function Footer() {
         </div>
       </div>
       <div className="relative max-w-7xl mx-auto px-4 md:px-6 border-t border-white/10 pt-6 mt-6 flex justify-between items-center text-white/40 text-[13px]">
-        <span>© {new Date().getFullYear()} NWY Advogados.</span>
-        <span>Desenvolvido por <a href="https://tauatech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">tauatech.com</a></span>
+        <span>© {new Date().getFullYear()} NWY Advogados | por <a href="https://tauatech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">tauatech.com</a></span>
       </div>
     </footer>
   );
