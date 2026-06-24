@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nwyadvogados.com.br/sitemap.xml
+Sitemap: https://www.nwyadvocacia.adv.br/sitemap.xml

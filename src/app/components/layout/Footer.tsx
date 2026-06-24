@@ -37,8 +37,8 @@ export function Footer() {
               </a>
             </p>
             <p className="font-['Inter',sans-serif] font-medium mt-1" style={{ fontSize: "clamp(11px, 1.5vw, 15px)" }}>
-              <a href="mailto:contato@nwyadvocacia.com.br" className="text-white/80 hover:text-[#5D7B93] transition-colors duration-300">
-                contato@nwyadvocacia.com.br
+              <a href="mailto:contato@nwyadvocacia.adv.br" className="text-white/80 hover:text-[#5D7B93] transition-colors duration-300">
+                contato@nwyadvocacia.adv.br
               </a>
             </p>
           </div>
